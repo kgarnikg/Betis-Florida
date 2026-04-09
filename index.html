@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C.D. Betis Florida – Gimnasio en Alicante</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0d0d0d;
+    --white: #f5f2ec;
+    --red: #c8281e;
+    --red-dark: #8e1a12;
+    --gold: #d4a828;
+    --gray: #6b6b6b;
+    --light: #f0ece4;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 4rem;
+    background: rgba(13,13,13,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(200,40,30,0.2);
+  }
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+    color: var(--white);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--red); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: rgba(245,242,236,0.7);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--red); }
+  .nav-cta {
+    background: var(--red);
+    color: var(--white);
+    padding: 0.55rem 1.4rem;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--red-dark); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0 4rem;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(135deg, rgba(13,13,13,0.95) 40%, rgba(200,40,30,0.08) 100%);
+    z-index: 1;
+  }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(200,40,30,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(200,40,30,0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: 0;
+  }
+  .hero-accent {
+    position: absolute; right: -100px; top: 50%;
+    transform: translateY(-50%);
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,40,30,0.12) 0%, transparent 70%);
+    z-index: 0;
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 720px;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(200,40,30,0.15);
+    border: 1px solid rgba(200,40,30,0.4);
+    color: var(--red);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.9rem;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4rem, 9vw, 8rem);
+    line-height: 0.92;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--red);
+  }
+  .hero p {
+    font-size: 1.1rem;
+    color: rgba(245,242,236,0.65);
+    line-height: 1.7;
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--red);
+    color: var(--white);
+    padding: 0.9rem 2rem;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: var(--red-dark); transform: translateY(-2px); }
+  .btn-outline {
+    border: 1px solid rgba(245,242,236,0.3);
+    color: var(--white);
+    padding: 0.9rem 2rem;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+  .btn-outline:hover { border-color: var(--red); color: var(--red); transform: translateY(-2px); }
+
+  .hero-stats {
+    display: flex; gap: 3rem; margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(245,242,236,0.1);
+  }
+  .stat-item {}
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: var(--red);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.75rem;
+    color: rgba(245,242,236,0.5);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.3rem;
+  }
+
+  /* SECTION BASE */
+  section { padding: 6rem 4rem; }
+  .section-tag {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .section-sub {
+    color: rgba(245,242,236,0.55);
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 520px;
+    font-weight: 300;
+  }
+
+  /* SERVICIOS */
+  #servicios { background: #111111; }
+  .services-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.5rem; flex-wrap: wrap; gap: 1.5rem; }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5px;
+    background: rgba(200,40,30,0.15);
+    border: 1px solid rgba(200,40,30,0.15);
+  }
+  .service-card {
+    background: #111111;
+    padding: 2.5rem 2rem;
+    transition: background 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--red);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .service-card:hover { background: #161616; }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-icon {
+    font-size: 2rem; margin-bottom: 1.2rem;
+    display: block;
+  }
+  .service-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.6rem;
+  }
+  .service-desc {
+    font-size: 0.88rem;
+    color: rgba(245,242,236,0.5);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  /* HORARIOS */
+  #horarios { background: var(--black); }
+  .horarios-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .schedule-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+  .schedule-table tr { border-bottom: 1px solid rgba(245,242,236,0.08); }
+  .schedule-table tr:last-child { border-bottom: none; }
+  .schedule-table td { padding: 1rem 0; font-size: 0.95rem; }
+  .schedule-table td:first-child { color: rgba(245,242,236,0.55); font-weight: 300; }
+  .schedule-table td:last-child { text-align: right; font-weight: 500; }
+  .schedule-table tr.closed td { color: rgba(245,242,236,0.3); }
+  .schedule-table tr.closed td:last-child { color: rgba(200,40,30,0.6); font-weight: 400; }
+  .badge-open {
+    display: inline-block;
+    background: rgba(0,180,100,0.12);
+    border: 1px solid rgba(0,180,100,0.3);
+    color: #4ade80;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.7rem;
+    border-radius: 2px;
+    margin-left: 0.8rem;
+    vertical-align: middle;
+  }
+  .horarios-info { padding: 2.5rem; background: #111111; border-left: 3px solid var(--red); }
+  .horarios-info h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem; margin-bottom: 1rem;
+  }
+  .horarios-info p { color: rgba(245,242,236,0.6); font-size: 0.9rem; line-height: 1.7; font-weight: 300; }
+  .horarios-info .tel {
+    display: block; margin-top: 1.5rem;
+    font-size: 1.4rem;
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--red);
+    letter-spacing: 0.05em;
+    text-decoration: none;
+  }
+  .horarios-info .tel:hover { color: var(--gold); }
+
+  /* INSTALACIONES */
+  #instalaciones { background: #0a0a0a; }
+  .facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .facility-item {
+    aspect-ratio: 4/3;
+    background: #1a1a1a;
+    border: 1px solid rgba(245,242,236,0.07);
+    border-radius: 2px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 1rem;
+    transition: border-color 0.25s, transform 0.2s;
+    cursor: default;
+  }
+  .facility-item:hover { border-color: rgba(200,40,30,0.4); transform: translateY(-4px); }
+  .facility-emoji { font-size: 2.5rem; }
+  .facility-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.08em;
+    color: var(--white);
+  }
+  .facility-item:first-child {
+    grid-column: span 2;
+    aspect-ratio: auto;
+    padding: 3rem;
+    background: linear-gradient(135deg, #1a0a0a, #1a1010);
+    border-color: rgba(200,40,30,0.2);
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+  .facility-item:first-child .facility-name { font-size: 1.8rem; }
+  .facility-text { font-size: 0.85rem; color: rgba(245,242,236,0.45); font-weight: 300; line-height: 1.6; margin-top: 0.3rem; }
+
+  /* UBICACION */
+  #ubicacion { background: #111111; }
+  .ubicacion-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .map-frame {
+    width: 100%; height: 380px;
+    border: 1px solid rgba(200,40,30,0.2);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .contact-info { padding-top: 1rem; }
+  .contact-info h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem; margin-bottom: 2rem;
+    color: var(--white);
+  }
+  .contact-row {
+    display: flex; gap: 1rem; align-items: flex-start;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba(245,242,236,0.08);
+  }
+  .contact-row:last-child { border-bottom: none; }
+  .contact-icon { font-size: 1.2rem; margin-top: 0.1rem; flex-shrink: 0; }
+  .contact-label { font-size: 0.75rem; color: rgba(245,242,236,0.4); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.3rem; }
+  .contact-value { font-size: 0.95rem; color: var(--white); font-weight: 400; }
+  .contact-value a { color: var(--red); text-decoration: none; }
+  .contact-value a:hover { text-decoration: underline; }
+
+  /* CTA BANNER */
+  .cta-banner {
+    background: var(--red);
+    padding: 5rem 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-banner::before {
+    content: 'BETIS';
+    position: absolute;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20rem;
+    color: rgba(255,255,255,0.04);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    pointer-events: none;
+  }
+  .cta-banner h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    color: var(--white);
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  .cta-banner p { color: rgba(255,255,255,0.75); margin-bottom: 2rem; font-weight: 300; position: relative; }
+  .btn-white {
+    display: inline-block;
+    background: var(--white);
+    color: var(--red);
+    padding: 0.9rem 2.5rem;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    transition: transform 0.15s, background 0.2s;
+  }
+  .btn-white:hover { background: #fffaf0; transform: translateY(-2px); }
+
+  /* FOOTER */
+  footer {
+    background: #080808;
+    padding: 3rem 4rem;
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid rgba(200,40,30,0.15);
+    flex-wrap: wrap; gap: 1.5rem;
+  }
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    color: var(--white);
+    letter-spacing: 0.1em;
+  }
+  .footer-logo span { color: var(--red); }
+  .footer-copy { font-size: 0.8rem; color: rgba(245,242,236,0.3); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { color: rgba(245,242,236,0.4); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.05em; }
+  .footer-links a:hover { color: var(--red); }
+
+  /* DIVIDER */
+  .divider {
+    width: 48px; height: 3px;
+    background: var(--red);
+    margin: 1.2rem 0 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 4rem 1.5rem; }
+    .hero { padding: 0 1.5rem; }
+    .hero h1 { font-size: 4rem; }
+    .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+    .horarios-wrap, .ubicacion-wrap { grid-template-columns: 1fr; }
+    .facilities-grid { grid-template-columns: 1fr 1fr; }
+    .facility-item:first-child { grid-column: span 2; }
+    .cta-banner { padding: 4rem 1.5rem; }
+    footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#"><span>C.D.</span> Betis Florida</a>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#horarios">Horarios</a></li>
+    <li><a href="#instalaciones">Instalaciones</a></li>
+    <li><a href="#ubicacion">Ubicación</a></li>
+  </ul>
+  <a class="nav-cta" href="tel:+34965280727">Llámanos</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-grid"></div>
+  <div class="hero-bg"></div>
+  <div class="hero-accent"></div>
+  <div class="hero-content">
+    <span class="hero-tag">📍 Florida · Alicante</span>
+    <h1>ENTRENA.<br><em>SUPERA.</em><br>TRIUNFA.</h1>
+    <p>El Club Deportivo Betis Florida es el espacio donde transformas tu cuerpo y superas tus límites, en el corazón del barrio Florida de Alicante.</p>
+    <div class="hero-btns">
+      <a class="btn-primary" href="#servicios">Ver servicios</a>
+      <a class="btn-outline" href="#ubicacion">Cómo llegar</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">4.4★</div>
+        <div class="stat-label">Valoración media</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">74+</div>
+        <div class="stat-label">Reseñas</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">13h</div>
+        <div class="stat-label">Apertura diaria</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="services-header">
+    <div>
+      <p class="section-tag">Lo que ofrecemos</p>
+      <h2 class="section-title">Servicios del club</h2>
+      <div class="divider"></div>
+      <p class="section-sub">Instalaciones completas para todos los niveles: desde principiantes hasta deportistas avanzados.</p>
+    </div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon">💪</span>
+      <div class="service-name">Sala de Pesas</div>
+      <p class="service-desc">Equipamiento completo de musculación y fuerza para entrenamientos de alto rendimiento.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">⚽</span>
+      <div class="service-name">Fútbol Sala</div>
+      <p class="service-desc">Pista interior de fútbol sala con suelo adecuado para partidos y entrenamientos.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🏀</span>
+      <div class="service-name">Baloncesto</div>
+      <p class="service-desc">Pista de baloncesto disponible para partidos individuales o de equipo.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🧘</span>
+      <div class="service-name">Actividades Dirigidas</div>
+      <p class="service-desc">Clases colectivas con entrenadores cualificados adaptadas a todos los niveles.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">☕</span>
+      <div class="service-name">Cafetería</div>
+      <p class="service-desc">Zona de descanso y cafetería para reponer fuerzas antes o después del entrenamiento.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🚿</span>
+      <div class="service-name">Vestuarios</div>
+      <p class="service-desc">Vestuarios y duchas limpias y bien mantenidas para tu comodidad.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HORARIOS -->
+<section id="horarios">
+  <div class="horarios-wrap">
+    <div>
+      <p class="section-tag">Cuándo visitarnos</p>
+      <h2 class="section-title">Horarios de apertura</h2>
+      <div class="divider"></div>
+      <table class="schedule-table">
+        <tr>
+          <td>Lunes</td>
+          <td>9:00 – 22:15 <span class="badge-open">Abierto</span></td>
+        </tr>
+        <tr>
+          <td>Martes</td>
+          <td>9:00 – 22:15</td>
+        </tr>
+        <tr>
+          <td>Miércoles</td>
+          <td>9:00 – 22:15</td>
+        </tr>
+        <tr>
+          <td>Jueves</td>
+          <td>9:00 – 22:15</td>
+        </tr>
+        <tr>
+          <td>Viernes</td>
+          <td>9:00 – 22:15</td>
+        </tr>
+        <tr class="closed">
+          <td>Sábado</td>
+          <td>Cerrado</td>
+        </tr>
+        <tr class="closed">
+          <td>Domingo</td>
+          <td>Cerrado</td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <div class="horarios-info">
+        <h3>¿Tienes alguna pregunta?</h3>
+        <p>Llámanos directamente o pásate por el club. Nuestro equipo estará encantado de informarte sobre tarifas, inscripciones y actividades disponibles.</p>
+        <p style="margin-top: 1rem;">El acceso al club es fácil: estamos situados en la calle Grado, en pleno barrio Florida, con buenas conexiones de transporte urbano.</p>
+        <a class="tel" href="tel:+34965280727">+34 965 280 727</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTALACIONES -->
+<section id="instalaciones">
+  <p class="section-tag">Nuestro espacio</p>
+  <h2 class="section-title">Instalaciones</h2>
+  <div class="divider"></div>
+  <p class="section-sub">Un espacio polideportivo completo con zonas diferenciadas para cada disciplina.</p>
+  <div class="facilities-grid">
+    <div class="facility-item">
+      <span class="facility-emoji">🏋️</span>
+      <div>
+        <div class="facility-name">Zona de Musculación</div>
+        <div class="facility-text">Equipamiento moderno de pesas libres y máquinas para todo tipo de entrenamiento de fuerza y tonificación.</div>
+      </div>
+    </div>
+    <div class="facility-item">
+      <span class="facility-emoji">⚽</span>
+      <div class="facility-name">Pista de Fútbol</div>
+    </div>
+    <div class="facility-item">
+      <span class="facility-emoji">🏀</span>
+      <div class="facility-name">Pista de Basket</div>
+    </div>
+    <div class="facility-item">
+      <span class="facility-emoji">🚿</span>
+      <div class="facility-name">Vestuarios</div>
+    </div>
+    <div class="facility-item">
+      <span class="facility-emoji">☕</span>
+      <div class="facility-name">Cafetería</div>
+    </div>
+  </div>
+</section>
+
+<!-- UBICACION -->
+<section id="ubicacion">
+  <p class="section-tag">Dónde estamos</p>
+  <h2 class="section-title">Ubicación</h2>
+  <div class="divider"></div>
+  <div class="ubicacion-wrap">
+    <div class="map-frame">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d793.1!2d-0.5106352!3d38.344266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDIwJzM5LjQiTiAwwrAzMCczOC4zIlc!5e0!3m2!1ses!2ses!4v1"
+        width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="contact-info">
+      <h3>C.D. Betis Florida</h3>
+      <div class="contact-row">
+        <span class="contact-icon">📍</span>
+        <div>
+          <div class="contact-label">Dirección</div>
+          <div class="contact-value">Carrer Grado, 10<br>03007 Alacant, Alicante</div>
+        </div>
+      </div>
+      <div class="contact-row">
+        <span class="contact-icon">📞</span>
+        <div>
+          <div class="contact-label">Teléfono</div>
+          <div class="contact-value"><a href="tel:+34965280727">+34 965 280 727</a></div>
+        </div>
+      </div>
+      <div class="contact-row">
+        <span class="contact-icon">🕐</span>
+        <div>
+          <div class="contact-label">Horario</div>
+          <div class="contact-value">Lunes – Viernes: 9:00 – 22:15<br>Sábado y Domingo: Cerrado</div>
+        </div>
+      </div>
+      <div class="contact-row">
+        <span class="contact-icon">🚌</span>
+        <div>
+          <div class="contact-label">Cómo llegar</div>
+          <div class="contact-value">Barrio Florida, Alicante<br>Accesible en transporte público</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <h2>EMPIEZA HOY MISMO</h2>
+  <p>Tu mejor versión te está esperando en el Betis Florida</p>
+  <a class="btn-white" href="tel:+34965280727">Llamar ahora · +34 965 280 727</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo"><span>C.D.</span> Betis Florida</div>
+  <div class="footer-copy">© 2025 C.D. Betis Florida · Alicante · Todos los derechos reservados</div>
+  <div class="footer-links">
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#horarios">Horarios</a>
+    <a href="#ubicacion">Contacto</a>
+  </div>
+</footer>
+
+</body>
+</html>
