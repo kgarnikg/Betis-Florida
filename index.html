@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>C.D. Betis Florida – Gimnasio en Alicante</title>
+<title>Fercor Sports Club – Gimnasio en Alicante</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -32,7 +32,7 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
     padding: 1.2rem 4rem;
-    background: rgba(13,13,13,0.85);
+    background: rgba(13,13,13,0.9);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(200,40,30,0.2);
   }
@@ -78,8 +78,7 @@
   }
   .hero-bg {
     position: absolute; inset: 0;
-    background:
-      linear-gradient(135deg, rgba(13,13,13,0.95) 40%, rgba(200,40,30,0.08) 100%);
+    background: linear-gradient(135deg, rgba(13,13,13,0.96) 40%, rgba(200,40,30,0.08) 100%);
     z-index: 1;
   }
   .hero-grid {
@@ -121,15 +120,12 @@
     letter-spacing: 0.02em;
     margin-bottom: 1.5rem;
   }
-  .hero h1 em {
-    font-style: normal;
-    color: var(--red);
-  }
+  .hero h1 em { font-style: normal; color: var(--red); }
   .hero p {
     font-size: 1.1rem;
     color: rgba(245,242,236,0.65);
     line-height: 1.7;
-    max-width: 480px;
+    max-width: 500px;
     margin-bottom: 2.5rem;
     font-weight: 300;
   }
@@ -165,7 +161,6 @@
     padding-top: 2rem;
     border-top: 1px solid rgba(245,242,236,0.1);
   }
-  .stat-item {}
   .stat-num {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.5rem;
@@ -179,6 +174,47 @@
     text-transform: uppercase;
     margin-top: 0.3rem;
   }
+
+  /* FREE TRIAL BANNER */
+  .trial-banner {
+    background: linear-gradient(90deg, rgba(200,40,30,0.15), rgba(200,40,30,0.05));
+    border-top: 1px solid rgba(200,40,30,0.3);
+    border-bottom: 1px solid rgba(200,40,30,0.3);
+    padding: 1.2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .trial-banner .trial-icon { font-size: 1.5rem; }
+  .trial-banner .trial-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+    color: var(--white);
+  }
+  .trial-banner .trial-text span { color: var(--red); }
+  .trial-banner .trial-sub {
+    font-size: 0.85rem;
+    color: rgba(245,242,236,0.55);
+    font-weight: 300;
+  }
+  .trial-btn {
+    background: var(--red);
+    color: var(--white);
+    padding: 0.6rem 1.5rem;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+  .trial-btn:hover { background: var(--red-dark); }
 
   /* SECTION BASE */
   section { padding: 6rem 4rem; }
@@ -201,6 +237,11 @@
     line-height: 1.7;
     max-width: 520px;
     font-weight: 300;
+  }
+  .divider {
+    width: 48px; height: 3px;
+    background: var(--red);
+    margin: 1.2rem 0 1.5rem;
   }
 
   /* SERVICIOS */
@@ -231,10 +272,7 @@
   }
   .service-card:hover { background: #161616; }
   .service-card:hover::before { transform: scaleX(1); }
-  .service-icon {
-    font-size: 2rem; margin-bottom: 1.2rem;
-    display: block;
-  }
+  .service-icon { font-size: 2rem; margin-bottom: 1.2rem; display: block; }
   .service-name {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.5rem;
@@ -246,6 +284,65 @@
     color: rgba(245,242,236,0.5);
     line-height: 1.6;
     font-weight: 300;
+  }
+
+  /* ENTRENADORES */
+  #entrenadores { background: #0a0a0a; }
+  .trainers-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  .trainer-features { display: flex; flex-direction: column; gap: 1.5rem; }
+  .trainer-feature {
+    display: flex; gap: 1.2rem; align-items: flex-start;
+    padding: 1.5rem;
+    background: #111111;
+    border-left: 3px solid var(--red);
+    transition: background 0.2s;
+  }
+  .trainer-feature:hover { background: #161616; }
+  .trainer-feature-icon { font-size: 1.5rem; flex-shrink: 0; }
+  .trainer-feature-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.35rem;
+  }
+  .trainer-feature-desc { font-size: 0.85rem; color: rgba(245,242,236,0.5); line-height: 1.6; font-weight: 300; }
+  .trainer-quote {
+    background: linear-gradient(135deg, #1a0a0a, #110808);
+    border: 1px solid rgba(200,40,30,0.2);
+    padding: 3rem;
+    position: relative;
+  }
+  .trainer-quote::before {
+    content: '"';
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 8rem;
+    color: rgba(200,40,30,0.12);
+    position: absolute;
+    top: -1rem; left: 2rem;
+    line-height: 1;
+  }
+  .trainer-quote p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(245,242,236,0.75);
+    font-weight: 300;
+    position: relative;
+    z-index: 1;
+  }
+  .trainer-quote cite {
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    color: var(--red);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-style: normal;
   }
 
   /* HORARIOS */
@@ -272,11 +369,21 @@
     margin-left: 0.8rem;
     vertical-align: middle;
   }
-  .horarios-info { padding: 2.5rem; background: #111111; border-left: 3px solid var(--red); }
-  .horarios-info h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.6rem; margin-bottom: 1rem;
+  .badge-partial {
+    display: inline-block;
+    background: rgba(212,168,40,0.12);
+    border: 1px solid rgba(212,168,40,0.3);
+    color: var(--gold);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.7rem;
+    border-radius: 2px;
+    margin-left: 0.8rem;
+    vertical-align: middle;
   }
+  .horarios-info { padding: 2.5rem; background: #111111; border-left: 3px solid var(--red); }
+  .horarios-info h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; margin-bottom: 1rem; }
   .horarios-info p { color: rgba(245,242,236,0.6); font-size: 0.9rem; line-height: 1.7; font-weight: 300; }
   .horarios-info .tel {
     display: block; margin-top: 1.5rem;
@@ -328,6 +435,67 @@
   .facility-item:first-child .facility-name { font-size: 1.8rem; }
   .facility-text { font-size: 0.85rem; color: rgba(245,242,236,0.45); font-weight: 300; line-height: 1.6; margin-top: 0.3rem; }
 
+  /* NUTRICION */
+  #nutricion { background: #111111; }
+  .nutrition-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  .nutrition-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .nutrition-item {
+    background: #1a1a1a;
+    border: 1px solid rgba(245,242,236,0.07);
+    padding: 1.5rem 1.2rem;
+    border-radius: 2px;
+    transition: border-color 0.25s, background 0.25s;
+    text-align: center;
+  }
+  .nutrition-item:hover { border-color: rgba(200,40,30,0.35); background: #1e1a1a; }
+  .nutrition-item .n-icon { font-size: 2rem; margin-bottom: 0.6rem; display: block; }
+  .nutrition-item .n-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.3rem;
+  }
+  .nutrition-item .n-desc { font-size: 0.8rem; color: rgba(245,242,236,0.45); line-height: 1.5; font-weight: 300; }
+  .nutrition-text { }
+  .nutrition-text .nt-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+  }
+  .nutrition-text .nt-title span { color: var(--red); }
+  .nutrition-text p { color: rgba(245,242,236,0.6); font-size: 0.95rem; line-height: 1.8; font-weight: 300; margin-bottom: 1rem; }
+
+  /* RESEÑAS */
+  #resenas { background: var(--black); }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .review-card {
+    background: #111111;
+    border: 1px solid rgba(245,242,236,0.07);
+    padding: 2rem;
+    border-radius: 2px;
+    transition: border-color 0.25s;
+  }
+  .review-card:hover { border-color: rgba(200,40,30,0.3); }
+  .review-stars { color: var(--gold); font-size: 1rem; margin-bottom: 1rem; letter-spacing: 0.1em; }
+  .review-text { font-size: 0.9rem; color: rgba(245,242,236,0.65); line-height: 1.7; font-weight: 300; margin-bottom: 1.2rem; }
+  .review-author { font-size: 0.8rem; color: rgba(245,242,236,0.35); letter-spacing: 0.08em; text-transform: uppercase; }
+
   /* UBICACION */
   #ubicacion { background: #111111; }
   .ubicacion-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
@@ -338,11 +506,7 @@
     overflow: hidden;
   }
   .contact-info { padding-top: 1rem; }
-  .contact-info h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.8rem; margin-bottom: 2rem;
-    color: var(--white);
-  }
+  .contact-info h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; margin-bottom: 2rem; }
   .contact-row {
     display: flex; gap: 1rem; align-items: flex-start;
     padding: 1.2rem 0;
@@ -364,10 +528,10 @@
     overflow: hidden;
   }
   .cta-banner::before {
-    content: 'BETIS';
+    content: 'FERCOR';
     position: absolute;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 20rem;
+    font-size: 18rem;
     color: rgba(255,255,255,0.04);
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
@@ -381,7 +545,20 @@
     margin-bottom: 1rem;
     position: relative;
   }
-  .cta-banner p { color: rgba(255,255,255,0.75); margin-bottom: 2rem; font-weight: 300; position: relative; }
+  .cta-banner p { color: rgba(255,255,255,0.75); margin-bottom: 0.5rem; font-weight: 300; position: relative; }
+  .cta-banner .cta-free {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: var(--white);
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: 2px;
+    margin-bottom: 2rem;
+    position: relative;
+  }
   .btn-white {
     display: inline-block;
     background: var(--white);
@@ -406,24 +583,12 @@
     border-top: 1px solid rgba(200,40,30,0.15);
     flex-wrap: wrap; gap: 1.5rem;
   }
-  .footer-logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.4rem;
-    color: var(--white);
-    letter-spacing: 0.1em;
-  }
+  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--white); letter-spacing: 0.1em; }
   .footer-logo span { color: var(--red); }
   .footer-copy { font-size: 0.8rem; color: rgba(245,242,236,0.3); }
   .footer-links { display: flex; gap: 1.5rem; }
   .footer-links a { color: rgba(245,242,236,0.4); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.05em; }
   .footer-links a:hover { color: var(--red); }
-
-  /* DIVIDER */
-  .divider {
-    width: 48px; height: 3px;
-    background: var(--red);
-    margin: 1.2rem 0 1.5rem;
-  }
 
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
@@ -432,9 +597,11 @@
     .hero { padding: 0 1.5rem; }
     .hero h1 { font-size: 4rem; }
     .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
-    .horarios-wrap, .ubicacion-wrap { grid-template-columns: 1fr; }
+    .trial-banner { padding: 1.5rem; }
+    .horarios-wrap, .ubicacion-wrap, .trainers-wrap, .nutrition-grid { grid-template-columns: 1fr; }
     .facilities-grid { grid-template-columns: 1fr 1fr; }
     .facility-item:first-child { grid-column: span 2; }
+    .nutrition-products { grid-template-columns: 1fr 1fr; }
     .cta-banner { padding: 4rem 1.5rem; }
     footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
   }
@@ -444,14 +611,16 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#"><span>C.D.</span> Betis Florida</a>
+  <a class="nav-logo" href="#"><span>Fercor</span> Sports Club</a>
   <ul class="nav-links">
     <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#entrenadores">Entrenadores</a></li>
     <li><a href="#horarios">Horarios</a></li>
     <li><a href="#instalaciones">Instalaciones</a></li>
+    <li><a href="#nutricion">Nutrición</a></li>
     <li><a href="#ubicacion">Ubicación</a></li>
   </ul>
-  <a class="nav-cta" href="tel:+34965280727">Llámanos</a>
+  <a class="nav-cta" href="tel:+34865817354">Llámanos</a>
 </nav>
 
 <!-- HERO -->
@@ -462,14 +631,14 @@
   <div class="hero-content">
     <span class="hero-tag">📍 Florida · Alicante</span>
     <h1>ENTRENA.<br><em>SUPERA.</em><br>TRIUNFA.</h1>
-    <p>El Club Deportivo Betis Florida es el espacio donde transformas tu cuerpo y superas tus límites, en el corazón del barrio Florida de Alicante.</p>
+    <p>Fercor Sports Club es el espacio donde transformas tu cuerpo y superas tus límites. Instalaciones completas, entrenadores profesionales y un ambiente inigualable en el corazón del barrio Florida.</p>
     <div class="hero-btns">
       <a class="btn-primary" href="#servicios">Ver servicios</a>
       <a class="btn-outline" href="#ubicacion">Cómo llegar</a>
     </div>
     <div class="hero-stats">
       <div class="stat-item">
-        <div class="stat-num">4.4★</div>
+        <div class="stat-num">5★</div>
         <div class="stat-label">Valoración media</div>
       </div>
       <div class="stat-item">
@@ -477,12 +646,22 @@
         <div class="stat-label">Reseñas</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">13h</div>
-        <div class="stat-label">Apertura diaria</div>
+        <div class="stat-num">6 días</div>
+        <div class="stat-label">Abierto por semana</div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- FREE TRIAL BANNER -->
+<div class="trial-banner">
+  <span class="trial-icon">🎁</span>
+  <div>
+    <div class="trial-text">¡<span>Primera clase gratis!</span> — Ven y prueba sin compromiso</div>
+    <div class="trial-sub">Cualquier servicio disponible · Solo tienes que llamarnos o pasarte por el club</div>
+  </div>
+  <a class="trial-btn" href="tel:+34865817354">Reservar gratis</a>
+</div>
 
 <!-- SERVICIOS -->
 <section id="servicios">
@@ -491,39 +670,83 @@
       <p class="section-tag">Lo que ofrecemos</p>
       <h2 class="section-title">Servicios del club</h2>
       <div class="divider"></div>
-      <p class="section-sub">Instalaciones completas para todos los niveles: desde principiantes hasta deportistas avanzados.</p>
+      <p class="section-sub">Instalaciones completas para todos los niveles: desde principiantes hasta deportistas avanzados. Buen ambiente, buena relación calidad-precio.</p>
     </div>
   </div>
   <div class="services-grid">
     <div class="service-card">
       <span class="service-icon">💪</span>
       <div class="service-name">Sala de Pesas</div>
-      <p class="service-desc">Equipamiento completo de musculación y fuerza para entrenamientos de alto rendimiento.</p>
+      <p class="service-desc">Equipamiento completo de musculación y fuerza. Máquinas modernas y pesas libres para entrenar todos los grupos musculares.</p>
     </div>
     <div class="service-card">
-      <span class="service-icon">⚽</span>
-      <div class="service-name">Fútbol Sala</div>
-      <p class="service-desc">Pista interior de fútbol sala con suelo adecuado para partidos y entrenamientos.</p>
+      <span class="service-icon">🥊</span>
+      <div class="service-name">Sala de Boxeo</div>
+      <p class="service-desc">Zona de boxeo equipada con sacos, guantes y tatami. Ideal para mejorar la forma física, la coordinación y liberar tensiones.</p>
     </div>
     <div class="service-card">
-      <span class="service-icon">🏀</span>
-      <div class="service-name">Baloncesto</div>
-      <p class="service-desc">Pista de baloncesto disponible para partidos individuales o de equipo.</p>
+      <span class="service-icon">🏃</span>
+      <div class="service-name">Cardio</div>
+      <p class="service-desc">Amplia zona de cardio con cintas de correr, bicicletas estáticas, elípticas y remos para mejorar tu resistencia y quemar calorías.</p>
     </div>
     <div class="service-card">
       <span class="service-icon">🧘</span>
       <div class="service-name">Actividades Dirigidas</div>
-      <p class="service-desc">Clases colectivas con entrenadores cualificados adaptadas a todos los niveles.</p>
+      <p class="service-desc">Clases colectivas de fitness, yoga, pilates y más, con entrenadores cualificados adaptadas a todos los niveles.</p>
     </div>
     <div class="service-card">
-      <span class="service-icon">☕</span>
-      <div class="service-name">Cafetería</div>
-      <p class="service-desc">Zona de descanso y cafetería para reponer fuerzas antes o después del entrenamiento.</p>
+      <span class="service-icon">🏋️</span>
+      <div class="service-name">Entrenamiento Personal</div>
+      <p class="service-desc">Sesiones individuales con entrenadores personales certificados. Planificación personalizada para alcanzar tus objetivos más rápido.</p>
     </div>
     <div class="service-card">
       <span class="service-icon">🚿</span>
       <div class="service-name">Vestuarios</div>
-      <p class="service-desc">Vestuarios y duchas limpias y bien mantenidas para tu comodidad.</p>
+      <p class="service-desc">Vestuarios y duchas limpias y bien mantenidas para tu comodidad antes y después del entrenamiento.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ENTRENADORES -->
+<section id="entrenadores">
+  <p class="section-tag">Profesionales a tu lado</p>
+  <h2 class="section-title">Entrenadores Expertos</h2>
+  <div class="divider"></div>
+  <p class="section-sub">Nuestro equipo de profesionales altamente cualificados está aquí para guiarte en cada paso de tu camino hacia el bienestar.</p>
+  <div class="trainers-wrap">
+    <div class="trainer-features">
+      <div class="trainer-feature">
+        <span class="trainer-feature-icon">🎓</span>
+        <div>
+          <div class="trainer-feature-title">Entrenadores Titulados</div>
+          <div class="trainer-feature-desc">Todo nuestro equipo cuenta con titulación oficial en Ciencias del Deporte o certificaciones reconocidas a nivel nacional.</div>
+        </div>
+      </div>
+      <div class="trainer-feature">
+        <span class="trainer-feature-icon">📋</span>
+        <div>
+          <div class="trainer-feature-title">Plan de Entrenamiento Personalizado</div>
+          <div class="trainer-feature-desc">Cada cliente recibe un programa adaptado a sus objetivos, nivel físico y disponibilidad de tiempo.</div>
+        </div>
+      </div>
+      <div class="trainer-feature">
+        <span class="trainer-feature-icon">📈</span>
+        <div>
+          <div class="trainer-feature-title">Seguimiento de Progreso</div>
+          <div class="trainer-feature-desc">Mediciones periódicas y ajustes de rutina para asegurar avances continuos y motivarte a superar tus metas.</div>
+        </div>
+      </div>
+      <div class="trainer-feature">
+        <span class="trainer-feature-icon">🥗</span>
+        <div>
+          <div class="trainer-feature-title">Asesoramiento Nutricional</div>
+          <div class="trainer-feature-desc">Orientación sobre nutrición deportiva para complementar tu entrenamiento y maximizar los resultados.</div>
+        </div>
+      </div>
+    </div>
+    <div class="trainer-quote">
+      <p>El gimnasio está bastante bien equipado para trabajar en todos los grupos musculares. Buen ambiente y un equipo de profesionales que realmente se preocupa por tus resultados. Una buena opción para ponerte en forma con excelente relación calidad-precio.</p>
+      <cite>— Opiniones reales de nuestros socios</cite>
     </div>
   </div>
 </section>
@@ -556,9 +779,9 @@
           <td>Viernes</td>
           <td>8:00 – 22:00 <span class="badge-open">Abierto</span></td>
         </tr>
-        <tr class="closed">
+        <tr>
           <td>Sábado</td>
-          <td>Cerrado</td>
+          <td>10:00 – 14:00 <span class="badge-partial">Mañana</span></td>
         </tr>
         <tr class="closed">
           <td>Domingo</td>
@@ -569,9 +792,10 @@
     <div>
       <div class="horarios-info">
         <h3>¿Tienes alguna pregunta?</h3>
-        <p>Llámanos directamente o pásate por el club. Nuestro equipo estará encantado de informarte sobre tarifas, inscripciones y actividades disponibles.</p>
-        <p style="margin-top: 1rem;">El acceso al club es fácil: estamos situados en la calle Grado, en pleno barrio Florida, con buenas conexiones de transporte urbano.</p>
-        <a class="tel" href="tel:+34965280727">+34 965 280 727</a>
+        <p>Llámanos directamente o pásate por el club. Nuestro equipo estará encantado de informarte sobre tarifas, inscripciones, clases y actividades disponibles.</p>
+        <p style="margin-top: 1rem;">Estamos en la Calle Grado, en pleno barrio Florida de Alicante. Fácil acceso en transporte público y buenas conexiones desde el centro.</p>
+        <p style="margin-top: 1rem; color: rgba(245,242,236,0.4); font-size: 0.8rem;">¡Recuerda! La primera clase es completamente gratis. Ven sin compromiso y descubre tu nuevo gimnasio.</p>
+        <a class="tel" href="tel:+34865817354">+34 865 817 354</a>
       </div>
     </div>
   </div>
@@ -582,30 +806,90 @@
   <p class="section-tag">Nuestro espacio</p>
   <h2 class="section-title">Instalaciones</h2>
   <div class="divider"></div>
-  <p class="section-sub">Un espacio polideportivo completo con zonas diferenciadas para cada disciplina.</p>
+  <p class="section-sub">Un espacio deportivo completo con zonas diferenciadas para cada disciplina y cada objetivo.</p>
   <div class="facilities-grid">
     <div class="facility-item">
       <span class="facility-emoji">🏋️</span>
       <div>
         <div class="facility-name">Zona de Musculación</div>
-        <div class="facility-text">Equipamiento moderno de pesas libres y máquinas para todo tipo de entrenamiento de fuerza y tonificación.</div>
+        <div class="facility-text">Equipamiento moderno de pesas libres y máquinas para todo tipo de entrenamiento de fuerza, tonificación e hipertrofia.</div>
       </div>
     </div>
     <div class="facility-item">
-      <span class="facility-emoji">⚽</span>
-      <div class="facility-name">Pista de Fútbol</div>
+      <span class="facility-emoji">🥊</span>
+      <div class="facility-name">Sala de Boxeo</div>
     </div>
     <div class="facility-item">
-      <span class="facility-emoji">🏀</span>
-      <div class="facility-name">Pista de Basket</div>
+      <span class="facility-emoji">🤸</span>
+      <div class="facility-name">Zona de Tatami</div>
+    </div>
+    <div class="facility-item">
+      <span class="facility-emoji">🏃</span>
+      <div class="facility-name">Zona Cardio</div>
     </div>
     <div class="facility-item">
       <span class="facility-emoji">🚿</span>
       <div class="facility-name">Vestuarios</div>
     </div>
-    <div class="facility-item">
-      <span class="facility-emoji">☕</span>
-      <div class="facility-name">Cafetería</div>
+  </div>
+</section>
+
+<!-- NUTRICION -->
+<section id="nutricion">
+  <p class="section-tag">Combustible para tu rendimiento</p>
+  <h2 class="section-title">Nutrición Deportiva</h2>
+  <div class="divider"></div>
+  <div class="nutrition-grid">
+    <div class="nutrition-text">
+      <div class="nt-title">Todo lo que necesitas<br><span>bajo el mismo techo</span></div>
+      <p>En Fercor Sports Club encontrarás una selección de productos de nutrición deportiva disponibles a la venta directamente en el club. Proteínas, suplementos, barritas energéticas y mucho más para complementar tu entrenamiento.</p>
+      <p>Nuestros entrenadores también pueden asesorarte sobre qué productos se adaptan mejor a tus objetivos y rutina de ejercicio.</p>
+    </div>
+    <div class="nutrition-products">
+      <div class="nutrition-item">
+        <span class="n-icon">🥛</span>
+        <div class="n-name">Proteínas</div>
+        <div class="n-desc">Whey, proteína vegana y caseína para recuperación muscular</div>
+      </div>
+      <div class="nutrition-item">
+        <span class="n-icon">⚡</span>
+        <div class="n-name">Pre-entreno</div>
+        <div class="n-desc">Fórmulas de energía y resistencia para maximizar tu rendimiento</div>
+      </div>
+      <div class="nutrition-item">
+        <span class="n-icon">🍫</span>
+        <div class="n-name">Barritas & Snacks</div>
+        <div class="n-desc">Snacks proteicos y energéticos para antes y después del gym</div>
+      </div>
+      <div class="nutrition-item">
+        <span class="n-icon">💊</span>
+        <div class="n-name">Vitaminas & BCAA</div>
+        <div class="n-desc">Suplementos para apoyar la salud y la recuperación muscular</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEÑAS -->
+<section id="resenas">
+  <p class="section-tag">Lo que dicen nuestros socios</p>
+  <h2 class="section-title">Opiniones Reales</h2>
+  <div class="divider"></div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Una buena opción para ponerte en forma en un gimnasio con buen ambiente. Lo recomiendo por la calidad-precio. Profesionales muy atentos y motivadores.</p>
+      <div class="review-author">Juan Carlos Gálvez Rodríguez</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">El gimnasio está bastante bien equipado para trabajar en todos los grupos musculares. Buen ambiente y un personal muy profesional.</p>
+      <div class="review-author">Roberto Carlos Cerruela</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Instalaciones completas, ambiente familiar y precios razonables. Los entrenadores son muy atentos y siempre están disponibles para resolver dudas.</p>
+      <div class="review-author">Socio de Fercor Sports Club</div>
     </div>
   </div>
 </section>
@@ -623,26 +907,26 @@
         loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="contact-info">
-      <h3>C.D. Betis Florida</h3>
+      <h3>Fercor Sports Club</h3>
       <div class="contact-row">
         <span class="contact-icon">📍</span>
         <div>
           <div class="contact-label">Dirección</div>
-          <div class="contact-value">Carrer Grado, 10<br>03007 Alacant, Alicante</div>
+          <div class="contact-value">Carrer Grado, 8<br>03007 Alacant, Alicante</div>
         </div>
       </div>
       <div class="contact-row">
         <span class="contact-icon">📞</span>
         <div>
           <div class="contact-label">Teléfono</div>
-          <div class="contact-value"><a href="tel:+34965280727">+34 965 280 727</a></div>
+          <div class="contact-value"><a href="tel:+34865817354">+34 865 817 354</a></div>
         </div>
       </div>
       <div class="contact-row">
         <span class="contact-icon">🕐</span>
         <div>
           <div class="contact-label">Horario</div>
-          <div class="contact-value">Lunes – Viernes: 9:00 – 22:15<br>Sábado y Domingo: Cerrado</div>
+          <div class="contact-value">Lunes – Viernes: 8:00 – 22:00<br>Sábado: 10:00 – 14:00<br>Domingo: Cerrado</div>
         </div>
       </div>
       <div class="contact-row">
@@ -652,6 +936,13 @@
           <div class="contact-value">Barrio Florida, Alicante<br>Accesible en transporte público</div>
         </div>
       </div>
+      <div class="contact-row">
+        <span class="contact-icon">🎁</span>
+        <div>
+          <div class="contact-label">Oferta de bienvenida</div>
+          <div class="contact-value" style="color: var(--red); font-weight: 500;">Primera clase 100% gratuita</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -659,18 +950,22 @@
 <!-- CTA BANNER -->
 <div class="cta-banner">
   <h2>EMPIEZA HOY MISMO</h2>
-  <p>Tu mejor versión te está esperando en el Betis Florida</p>
-  <a class="btn-white" href="tel:+34965280727">Llamar ahora · +34 965 280 727</a>
+  <p>Tu mejor versión te está esperando en Fercor Sports Club</p>
+  <div class="cta-free">🎁 Primera clase completamente gratis — sin compromiso</div>
+  <br>
+  <a class="btn-white" href="tel:+34865817354">Llamar ahora · +34 865 817 354</a>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo"><span>C.D.</span> Betis Florida</div>
-  <div class="footer-copy">© 2025 C.D. Betis Florida · Alicante · Todos los derechos reservados</div>
+  <div class="footer-logo"><span>Fercor</span> Sports Club</div>
+  <div class="footer-copy">© 2025 Fercor Sports Club · Alicante · Todos los derechos reservados</div>
   <div class="footer-links">
     <a href="#inicio">Inicio</a>
     <a href="#servicios">Servicios</a>
+    <a href="#entrenadores">Entrenadores</a>
     <a href="#horarios">Horarios</a>
+    <a href="#nutricion">Nutrición</a>
     <a href="#ubicacion">Contacto</a>
   </div>
 </footer>
