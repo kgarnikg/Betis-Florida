@@ -271,6 +271,10 @@
   }
   .nav-wa:hover { background: var(--wa-dark); transform: translateY(-1px); }
   .nav-wa .wa-icon { width: 1rem; height: 1rem; }
+  .nav-social { display: flex; align-items: center; gap: 0.5rem; }
+  .nav-social a { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(245,242,236,0.2); color: rgba(245,242,236,0.6); text-decoration: none; transition: border-color 0.2s, color 0.2s, background 0.2s; }
+  .nav-social a:hover { border-color: var(--red); color: var(--white); background: rgba(0,102,255,0.15); }
+  .nav-social svg { width: 15px; height: 15px; fill: currentColor; }
 
   /* Hero WhatsApp button (prominent) */
   .btn-wa {
@@ -401,6 +405,49 @@
   }
   .wa-float:hover .wa-float-label { opacity: 1; transform: translateY(-50%) translateX(-4px); }
 
+  /* SOCIAL SECTION — TikTok + Instagram */
+  .social-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; margin-top: 3rem; }
+  .tiktok-videos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .tiktok-embed-wrap { position: relative; width: 100%; padding-top: 177%; border-radius: 4px; overflow: hidden; background: #111; border: 1px solid rgba(245,242,236,0.07); }
+  .tiktok-embed-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .instagram-card {
+    background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);
+    border-radius: 4px; padding: 2.5rem 2rem;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 1.5rem; text-align: center; min-height: 350px;
+    transition: transform 0.2s; text-decoration: none; color: #fff;
+  }
+  .instagram-card:hover { transform: translateY(-4px); }
+  .ig-icon { width: 64px; height: 64px; border: 3px solid rgba(255,255,255,0.7); border-radius: 22%; padding: 12px; }
+  .ig-icon svg { width: 100%; height: 100%; fill: #fff; }
+  .ig-handle { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.06em; }
+  .ig-cta { font-size: 0.9rem; opacity: 0.9; line-height: 1.5; }
+  .ig-btn { display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 0.65rem 1.5rem; border-radius: 2px; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: background 0.2s; }
+  .ig-btn:hover { background: rgba(255,255,255,0.35); }
+  .tiktok-card {
+    background: #000; border: 1px solid rgba(245,242,236,0.07); border-radius: 4px;
+    padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;
+    text-decoration: none; color: var(--white); transition: transform 0.2s;
+  }
+  .tiktok-card:hover { transform: translateY(-4px); }
+  .tt-header { display: flex; align-items: center; gap: 0.8rem; }
+  .tt-logo svg { width: 28px; height: 28px; fill: #fff; }
+  .tt-info { display: flex; flex-direction: column; }
+  .tt-handle { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 0.05em; }
+  .tt-label { font-size: 0.75rem; color: rgba(245,242,236,0.5); }
+  .tt-btn { display: inline-block; background: #fe2c55; color: #fff; padding: 0.55rem 1.2rem; border-radius: 2px; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; text-align: center; transition: background 0.2s; }
+  .tt-btn:hover { background: #e0264c; }
+
+  @media (max-width: 900px) {
+    .social-grid { grid-template-columns: 1fr; }
+    .tiktok-videos { grid-template-columns: repeat(3, 1fr); }
+    .tiktok-embed-wrap { padding-top: 177%; }
+  }
+  @media (max-width: 600px) {
+    .tiktok-videos { grid-template-columns: 1fr 1fr; }
+    .tiktok-videos .tiktok-embed-wrap:last-child { display: none; }
+  }
+
   /* FOOTER */
   footer { background: #080808; padding: 3rem 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,102,255,0.15); flex-wrap: wrap; gap: 1.5rem; }
   .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--white); letter-spacing: 0.1em; }
@@ -425,6 +472,7 @@
     .nav-wa { padding: 0.45rem 0.7rem; font-size: 0.65rem; letter-spacing: 0.05em; gap: 0.35rem; }
     .nav-wa .wa-icon { width: 0.9rem; height: 0.9rem; }
     .nav-wa span { display: none; }
+    .nav-social { display: none; }
     section { padding: 4rem 1.25rem; }
     .hero { padding: 0 1.25rem; min-height: auto; padding-top: 6rem; padding-bottom: 3rem; }
     .hero-accent { width: 300px; height: 300px; right: -150px; }
@@ -505,6 +553,10 @@
       <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.11 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.74.46 3.44 1.32 4.94L2 22l5.3-1.39a9.88 9.88 0 0 0 4.73 1.2h.01c5.46 0 9.9-4.44 9.9-9.9a9.8 9.8 0 0 0-2.83-6.99ZM12.04 20.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.15.83.84-3.07-.2-.31a8.18 8.18 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.24 8.24Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.8-.23-.08-.4-.13-.56.13-.17.25-.65.8-.8.97-.15.17-.3.19-.55.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.3.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.55-1.34-.76-1.84-.2-.48-.4-.41-.55-.42l-.47-.01c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.76 2.68 4.26 3.76.6.26 1.06.41 1.42.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29Z"/></svg>
       <span data-i18n="nav_wa">WhatsApp</span>
     </a>
+    <div class="nav-social">
+      <a href="https://www.instagram.com/gymfercor.bf/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85 0 3.2-.01 3.58-.07 4.85-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85 0-3.2.01-3.58.07-4.85C2.38 3.86 3.9 2.31 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16ZM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.7.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.63-6.78-6.98-6.98C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84ZM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4Zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44Z"/></svg></a>
+      <a href="https://www.tiktok.com/@gym_fercor" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78 2.93 2.93 0 0 1 .88.13v-3.5a6.37 6.37 0 0 0-.88-.07A6.34 6.34 0 0 0 3.15 15.3a6.34 6.34 0 0 0 10.86 4.44 6.27 6.27 0 0 0 1.86-4.48V8.73a8.22 8.22 0 0 0 4.72 1.49V6.78a4.86 4.86 0 0 1-1-.09Z"/></svg></a>
+    </div>
   </div>
 </nav>
 
@@ -709,6 +761,40 @@
   </div>
 </section>
 
+<section id="social">
+  <p class="section-tag" data-i18n="soc_tag">Síguenos en redes</p>
+  <h2 class="section-title" data-i18n="soc_title">Nuestras Redes</h2>
+  <div class="divider"></div>
+  <div class="social-grid">
+    <div>
+      <div class="tiktok-card">
+        <div class="tt-header">
+          <span class="tt-logo"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78 2.93 2.93 0 0 1 .88.13v-3.5a6.37 6.37 0 0 0-.88-.07A6.34 6.34 0 0 0 3.15 15.3a6.34 6.34 0 0 0 10.86 4.44 6.27 6.27 0 0 0 1.86-4.48V8.73a8.22 8.22 0 0 0 4.72 1.49V6.78a4.86 4.86 0 0 1-1-.09Z"/></svg></span>
+          <div class="tt-info"><span class="tt-handle">@gym_fercor</span><span class="tt-label" data-i18n="soc_tt_label">Entrenamientos y vida del club</span></div>
+        </div>
+      </div>
+      <div class="tiktok-videos" style="margin-top:1rem;">
+        <div class="tiktok-embed-wrap">
+          <iframe src="https://www.tiktok.com/embed/v2/7626809838189710614" allowfullscreen allow="encrypted-media" loading="lazy"></iframe>
+        </div>
+        <div class="tiktok-embed-wrap">
+          <iframe src="https://www.tiktok.com/embed/v2/7619310335807261974" allowfullscreen allow="encrypted-media" loading="lazy"></iframe>
+        </div>
+        <div class="tiktok-embed-wrap">
+          <iframe src="https://www.tiktok.com/embed/v2/7629421697464093974" allowfullscreen allow="encrypted-media" loading="lazy"></iframe>
+        </div>
+      </div>
+      <a class="tt-btn" href="https://www.tiktok.com/@gym_fercor" target="_blank" rel="noopener" style="display:block; margin-top:1rem; text-align:center;" data-i18n="soc_tt_btn">Ver más en TikTok</a>
+    </div>
+    <a class="instagram-card" href="https://www.instagram.com/gymfercor.bf/" target="_blank" rel="noopener">
+      <div class="ig-icon"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85 0 3.2-.01 3.58-.07 4.85-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85 0-3.2.01-3.58.07-4.85C2.38 3.86 3.9 2.31 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16ZM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.7.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.63-6.78-6.98-6.98C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84ZM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4Zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44Z"/></svg></div>
+      <div class="ig-handle">@gymfercor.bf</div>
+      <div class="ig-cta" data-i18n="soc_ig_cta">Fotos, reels y la vida diaria del club. ¡Síguenos!</div>
+      <span class="ig-btn" data-i18n="soc_ig_btn">Seguir en Instagram</span>
+    </a>
+  </div>
+</section>
+
 <section id="ubicacion">
   <p class="section-tag" data-i18n="loc_tag">Dónde estamos</p>
   <h2 class="section-title" data-i18n="loc_title">Ubicación</h2>
@@ -889,6 +975,7 @@ const i18n = {
     n3_name:"Barritas & Snacks", n3_desc:"Snacks proteicos y energéticos para antes y después del gym",
     n4_name:"Vitaminas & BCAA", n4_desc:"Suplementos para apoyar la salud y la recuperación muscular",
     rev_tag:"Lo que dicen nuestros socios", rev_title:"Opiniones Reales", g_count:"Ver 77 reseñas en Google",
+    soc_tag:"Síguenos en redes", soc_title:"Nuestras Redes", soc_tt_label:"Entrenamientos y vida del club", soc_tt_btn:"Ver más en TikTok", soc_ig_cta:"Fotos, reels y la vida diaria del club. ¡Síguenos!", soc_ig_btn:"Seguir en Instagram",
     rev1_text:"Una buena opción para ponerte en forma en un gimnasio con buen ambiente. Lo recomiendo por la calidad-precio. Profesionales muy atentos y motivadores.",
     rev2_text:"El gimnasio está bastante bien equipado para trabajar en todos los grupos musculares. Buen ambiente y un personal muy profesional.",
     rev3_text:"Instalaciones completas, ambiente familiar y precios razonables. Los entrenadores son muy atentos y siempre están disponibles para resolver dudas.",
@@ -962,6 +1049,7 @@ const i18n = {
     n3_name:"Bars & Snacks", n3_desc:"Protein and energy snacks for before and after the gym",
     n4_name:"Vitamins & BCAA", n4_desc:"Supplements to support health and muscle recovery",
     rev_tag:"What our members say", rev_title:"Real Reviews", g_count:"See 77 reviews on Google",
+    soc_tag:"Follow us", soc_title:"Our Socials", soc_tt_label:"Workouts and club life", soc_tt_btn:"See more on TikTok", soc_ig_cta:"Photos, reels and daily club life. Follow us!", soc_ig_btn:"Follow on Instagram",
     rev1_text:"A great option for getting in shape in a gym with a good vibe. I recommend it for the quality-price ratio. Very attentive and motivating professionals.",
     rev2_text:"The gym is very well equipped to work all muscle groups. Great atmosphere and very professional staff.",
     rev3_text:"Complete facilities, friendly atmosphere and reasonable prices. The trainers are very attentive and always available to answer questions.",
@@ -1035,6 +1123,7 @@ const i18n = {
     n3_name:"Батончики и снеки", n3_desc:"Протеиновые и энергетические снеки до и после тренировки",
     n4_name:"Витамины и BCAA", n4_desc:"Добавки для поддержания здоровья и восстановления мышц",
     rev_tag:"Что говорят наши члены", rev_title:"Реальные отзывы", g_count:"Смотреть 77 отзывов в Google",
+    soc_tag:"Подписывайся", soc_title:"Мы в соцсетях", soc_tt_label:"Тренировки и жизнь клуба", soc_tt_btn:"Смотреть ещё в TikTok", soc_ig_cta:"Фото, рилсы и ежедневная жизнь клуба. Подписывайся!", soc_ig_btn:"Подписаться в Instagram",
     rev1_text:"Отличный вариант для тех, кто хочет прийти в форму в зале с хорошей атмосферой. Рекомендую за соотношение цены и качества. Очень внимательные и мотивирующие специалисты.",
     rev2_text:"Зал отлично оснащён для проработки всех групп мышц. Хорошая атмосфера и очень профессиональный персонал.",
     rev3_text:"Полное оснащение, дружелюбная атмосфера и разумные цены. Тренеры очень внимательны и всегда готовы ответить на вопросы.",
