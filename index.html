@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fercor Sports Club – Gimnasio en Alicante</title>
+<meta name="description" content="Fercor Sports Club — gimnasio completo en el barrio Florida de Alicante. Pesas, MMA, K1, cardio, clases dirigidas y nutrición deportiva. Primera clase GRATIS. Reserva por WhatsApp.">
+<meta name="keywords" content="gimnasio Alicante, gym Alicante, Fercor, barrio Florida, MMA Alicante, K1 Alicante, kickboxing Alicante, musculación, entrenador personal Alicante, clase gratis">
+<meta name="author" content="Fercor Sports Club">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kgarnikg.github.io/Betis-Florida/">
+
+<!-- Open Graph (WhatsApp, Facebook, LinkedIn, Telegram) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Fercor Sports Club">
+<meta property="og:title" content="Fercor Sports Club — Gimnasio en Alicante">
+<meta property="og:description" content="Gimnasio completo en el barrio Florida de Alicante. Primera clase GRATIS — reserva por WhatsApp.">
+<meta property="og:url" content="https://kgarnikg.github.io/Betis-Florida/">
+<meta property="og:image" content="https://kgarnikg.github.io/Betis-Florida/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fercor Sports Club — Gimnasio en Alicante">
+<meta name="twitter:description" content="Gimnasio completo en el barrio Florida. Primera clase GRATIS.">
+<meta name="twitter:image" content="https://kgarnikg.github.io/Betis-Florida/og-image.jpg">
+
+<!-- Theme color for mobile browsers -->
+<meta name="theme-color" content="#ffffff">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --black: #ffffff; --white: #1a1a2e; --red: #0066FF;
+    --red-dark: #0044CC; --gold: #d4a828;
+  }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(--white); overflow-x: hidden; width: 100%; max-width: 100vw; }
+
+  /* LANG SWITCHER */
+  .lang-switcher { display: flex; gap: 0.4rem; align-items: center; }
+  .lang-btn {
+    background: transparent; border: 1px solid rgba(0,102,255,0.25);
+    color: rgba(26,26,46,0.5); font-size: 0.72rem; letter-spacing: 0.1em;
+    text-transform: uppercase; padding: 0.3rem 0.65rem; border-radius: 2px;
+    cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.2s;
+  }
+  .lang-btn:hover { border-color: var(--red); color: var(--red); }
+  .lang-btn.active { background: var(--red); border-color: var(--red); color: #fff; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 4rem; background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,102,255,0.15); box-shadow: 0 2px 20px rgba(0,102,255,0.06); gap: 1rem;
+  }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 0.1em; color: #1a1a2e; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+  .nav-logo span { color: var(--red); }
+  .nav-links { display: flex; gap: 1.6rem; list-style: none; }
+  .nav-links a { color: rgba(26,26,46,0.6); text-decoration: none; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--red); }
+  .nav-right { display: flex; align-items: center; gap: 1rem; }
+  .nav-cta { background: var(--red); color: #fff; padding: 0.55rem 1.4rem; border-radius: 2px; text-decoration: none; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: background 0.2s; white-space: nowrap; }
+  .nav-cta:hover { background: var(--red-dark); }
+
+  /* HERO */
+  .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding: 0 4rem; }
+  .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,20,60,0.97) 30%, rgba(0,102,255,0.85) 100%); z-index: 1; }
+  .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 60px 60px; z-index: 0; }
+  .hero-accent { position: absolute; right: -100px; top: 50%; transform: translateY(-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(0,102,255,0.25) 0%, transparent 70%); z-index: 0; }
+  .hero-content { position: relative; z-index: 2; max-width: 720px; padding-top: 80px; }
+  .hero-tag { display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); color: #fff; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 2px; margin-bottom: 1.5rem; }
+  .hero h1 { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(4rem, 9vw, 8rem); line-height: 0.92; letter-spacing: 0.02em; margin-bottom: 1.5rem; }
+  .hero h1 em { font-style: normal; color: #66b3ff; }
+  .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.75); line-height: 1.7; max-width: 500px; margin-bottom: 2.5rem; font-weight: 300; }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary { background: #fff; color: #0066FF; padding: 0.9rem 2rem; border-radius: 2px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; transition: background 0.2s, transform 0.15s; }
+  .btn-primary:hover { background: #e8f0ff; transform: translateY(-2px); }
+  .btn-outline { border: 1px solid rgba(255,255,255,0.5); color: #fff; padding: 0.9rem 2rem; border-radius: 2px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; transition: border-color 0.2s, transform 0.15s; }
+  .btn-outline:hover { border-color: #fff; color: #fff; transform: translateY(-2px); }
+  .hero-stats { display: flex; gap: 3rem; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
+  .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: #66b3ff; line-height: 1; }
+  .stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.6); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.3rem; }
+
+  /* TRIAL BANNER */
+  .trial-banner { background: linear-gradient(90deg, #0055dd, #0077ff); border-top: none; border-bottom: none; padding: 1.2rem 4rem; display: flex; align-items: center; justify-content: center; gap: 1.5rem; text-align: center; flex-wrap: wrap; }
+  .trial-banner .trial-icon { font-size: 1.5rem; }
+  .trial-banner .trial-text { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.1em; color: #fff; }
+  .trial-banner .trial-text span { color: #99ccff; }
+  .trial-banner .trial-sub { font-size: 0.85rem; color: rgba(255,255,255,0.7); font-weight: 300; }
+  .trial-btn { background: #fff; color: #0066FF; padding: 0.6rem 1.5rem; border-radius: 2px; text-decoration: none; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: background 0.2s; white-space: nowrap; }
+  .trial-btn:hover { background: var(--red-dark); }
+
+  /* SECTIONS */
+  section { padding: 6rem 4rem; }
+  .section-tag { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; margin-bottom: 1rem; color: #1a1a2e; }
+  .section-sub { color: rgba(26,26,46,0.55); font-size: 1rem; line-height: 1.7; max-width: 520px; font-weight: 300; }
+  .divider { width: 48px; height: 3px; background: var(--red); margin: 1.2rem 0 1.5rem; }
+
+  /* SERVICIOS */
+  #servicios { background: #f7f9ff; }
+  .services-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.5rem; flex-wrap: wrap; gap: 1.5rem; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5px; background: rgba(0,102,255,0.08); border: 1px solid rgba(0,102,255,0.15); }
+  .service-card { background: #fff; padding: 2.5rem 2rem; transition: background 0.25s; position: relative; overflow: hidden; }
+  .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
+  .service-card:hover { background: #f0f4ff; }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-icon { font-size: 2rem; margin-bottom: 1.2rem; display: block; }
+  .service-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+  .service-desc { font-size: 0.88rem; color: rgba(26,26,46,0.5); line-height: 1.6; font-weight: 300; }
+
+  /* TRAINERS */
+  #entrenadores { background: #fff; }
+  .trainers-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem; }
+  .trainer-features { display: flex; flex-direction: column; gap: 1.5rem; }
+  .trainer-feature { display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; background: #f7f9ff; border-left: 3px solid var(--red); transition: background 0.2s; }
+  .trainer-feature:hover { background: #e8f0ff; }
+  .trainer-feature-icon { font-size: 1.5rem; flex-shrink: 0; }
+  .trainer-feature-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 0.05em; margin-bottom: 0.35rem; }
+  .trainer-feature-desc { font-size: 0.85rem; color: rgba(26,26,46,0.5); line-height: 1.6; font-weight: 300; }
+  .trainer-quote { background: linear-gradient(135deg, #e8f0ff, #f0f4ff); border: 1px solid rgba(0,102,255,0.2); padding: 3rem; position: relative; }
+  .trainer-quote::before { content: '"'; font-family: 'Bebas Neue', sans-serif; font-size: 8rem; color: rgba(0,102,255,0.12); position: absolute; top: -1rem; left: 2rem; line-height: 1; }
+  .trainer-quote p { font-size: 1.05rem; line-height: 1.8; color: rgba(26,26,46,0.75); font-weight: 300; position: relative; z-index: 1; }
+  .trainer-quote cite { display: block; margin-top: 1.5rem; font-size: 0.8rem; color: var(--red); letter-spacing: 0.1em; text-transform: uppercase; font-style: normal; }
+
+  /* HORARIOS */
+  #horarios { background: #f0f4ff; }
+  .horarios-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .schedule-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+  .schedule-table tr { border-bottom: 1px solid rgba(0,102,255,0.1); }
+  .schedule-table tr:last-child { border-bottom: none; }
+  .schedule-table td { padding: 1rem 0; font-size: 0.95rem; }
+  .schedule-table td:first-child { color: rgba(26,26,46,0.55); font-weight: 300; }
+  .schedule-table td:last-child { text-align: right; font-weight: 500; }
+  .schedule-table tr.closed td { color: rgba(26,26,46,0.3); }
+  .schedule-table tr.closed td:last-child { color: rgba(0,102,255,0.6); font-weight: 400; }
+  .schedule-table tr.today td { color: #1a1a2e; font-weight: 500; background: rgba(0,102,255,0.06); }
+  .schedule-table tr.today td:first-child { position: relative; padding-left: 1rem; }
+  .schedule-table tr.today td:first-child::before {
+    content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+    width: 3px; height: 60%; background: var(--red);
+  }
+  .live-status {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    margin-top: 1.5rem; padding: 0.6rem 1rem;
+    background: rgba(0,180,100,0.1); border: 1px solid rgba(0,180,100,0.35);
+    border-radius: 2px;
+    font-size: 0.85rem; font-weight: 500; color: #4ade80;
+    letter-spacing: 0.04em;
+  }
+  .live-status.closed-now {
+    background: rgba(0,102,255,0.1); border-color: rgba(0,102,255,0.4); color: #ff7a6e;
+  }
+  .live-dot {
+    width: 10px; height: 10px; border-radius: 50%; background: currentColor;
+    box-shadow: 0 0 0 0 currentColor;
+    animation: liveDot 2s ease-out infinite;
+    flex-shrink: 0;
+  }
+  @keyframes liveDot {
+    0%   { box-shadow: 0 0 0 0 rgba(74,222,128,0.55); }
+    70%  { box-shadow: 0 0 0 8px rgba(74,222,128,0); }
+    100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); }
+  }
+  .live-status.closed-now .live-dot { animation: none; }
+  .badge-open { display: inline-block; background: rgba(0,180,100,0.12); border: 1px solid rgba(0,180,100,0.3); color: #4ade80; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.7rem; border-radius: 2px; margin-left: 0.8rem; vertical-align: middle; }
+  .horarios-info { padding: 2.5rem; background: #fff; border-radius: 4px; box-shadow: 0 4px 20px rgba(0,102,255,0.08); border-left: 3px solid var(--red); }
+  .horarios-info h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; margin-bottom: 1rem; }
+  .horarios-info p { color: rgba(26,26,46,0.6); font-size: 0.9rem; line-height: 1.7; font-weight: 300; }
+  .horarios-info .tel { display: block; margin-top: 1.5rem; font-size: 1.4rem; font-family: 'Bebas Neue', sans-serif; color: var(--red); letter-spacing: 0.05em; text-decoration: none; }
+  .horarios-info .tel:hover { color: var(--gold); }
+
+  /* INSTALACIONES */
+  #instalaciones { background: #fff; }
+  .facilities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  .facility-item { min-height: 280px; background: #fff; border: 1px solid rgba(0,102,255,0.1); border-radius: 6px; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 4px 16px rgba(0,102,255,0.06); transition: border-color 0.25s, transform 0.2s; }
+  .facility-item:hover { border-color: rgba(0,102,255,0.4); transform: translateY(-4px); }
+  .facility-photo { width: 100%; height: 200px; object-fit: cover; display: block; filter: brightness(0.95) contrast(1.02); transition: filter 0.3s; }
+  .facility-item:hover .facility-photo { filter: brightness(1) contrast(1.05); }
+  .facility-body { padding: 1.3rem 1.5rem; flex: 1; display: flex; flex-direction: column; gap: 0.5rem; }
+  .facility-emoji { font-size: 2.5rem; }
+  .facility-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.25rem; letter-spacing: 0.08em; }
+  .facility-item:first-child { grid-column: span 2; flex-direction: row; }
+  .facility-item:first-child .facility-photo { width: 50%; height: auto; min-height: 320px; }
+  .facility-item:first-child .facility-body { padding: 2rem 2.5rem; justify-content: center; }
+  .facility-item:first-child .facility-name { font-size: 1.8rem; }
+  .facility-text { font-size: 0.85rem; color: rgba(26,26,46,0.5); font-weight: 300; line-height: 1.55; margin-top: 0.2rem; }
+  /* Photo gallery strip above facilities */
+  .gym-gallery { display: flex; gap: 0.4rem; margin-top: 3rem; margin-bottom: 0.5rem; overflow: hidden; border-radius: 2px; }
+  .gym-gallery img { flex: 1; min-width: 0; height: 220px; object-fit: cover; filter: brightness(0.92) contrast(1.02); transition: filter 0.3s, flex 0.4s; cursor: pointer; }
+  .gym-gallery img:hover { filter: brightness(1) contrast(1.05); flex: 1.6; }
+
+  /* NUTRICION */
+  #nutricion { background: #f7f9ff; }
+  .nutrition-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem; }
+  .nutrition-photo { width: 100%; border-radius: 2px; border: 1px solid rgba(0,102,255,0.15); margin-bottom: 1.5rem; }
+  .nutrition-products { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .nutrition-item { background: #fff; border: 1px solid rgba(0,102,255,0.1); padding: 1.5rem 1.2rem; box-shadow: 0 2px 10px rgba(0,102,255,0.04); border-radius: 2px; transition: border-color 0.25s, background 0.25s; text-align: center; }
+  .nutrition-item:hover { border-color: rgba(0,102,255,0.35); background: #f0f4ff; }
+  .n-icon { font-size: 2rem; margin-bottom: 0.6rem; display: block; }
+  .n-name { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .n-desc { font-size: 0.8rem; color: rgba(26,26,46,0.45); line-height: 1.5; font-weight: 300; }
+  .nt-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; margin-bottom: 1.5rem; line-height: 1.1; }
+  .nt-title span { color: var(--red); }
+  .nutrition-text p { color: rgba(26,26,46,0.6); font-size: 0.95rem; line-height: 1.8; font-weight: 300; margin-bottom: 1rem; }
+
+  /* REVIEWS */
+  #resenas { background: #fff; }
+  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .review-card { background: #f7f9ff; border: 1px solid rgba(0,102,255,0.1); padding: 2rem; border-radius: 2px; transition: border-color 0.25s; }
+  .review-card:hover { border-color: rgba(0,102,255,0.3); }
+  .review-stars { color: var(--gold); margin-bottom: 1rem; }
+  .review-text { font-size: 0.9rem; color: rgba(26,26,46,0.65); line-height: 1.7; font-weight: 300; margin-bottom: 1.2rem; }
+  .review-author { font-size: 0.8rem; color: rgba(26,26,46,0.4); letter-spacing: 0.08em; text-transform: uppercase; }
+  .reviews-cta { display: flex; justify-content: center; margin-top: 2.5rem; }
+  .google-reviews-btn {
+    display: inline-flex; align-items: center; gap: 0.9rem;
+    background: #fff; border: 1px solid rgba(0,102,255,0.15);
+    padding: 0.9rem 1.6rem; border-radius: 2px;
+    text-decoration: none; color: var(--white);
+    font-size: 0.85rem; letter-spacing: 0.05em;
+    transition: border-color 0.25s, background 0.25s, transform 0.15s;
+  }
+  .google-reviews-btn:hover { border-color: rgba(0,102,255,0.4); background: #f0f4ff; transform: translateY(-2px); }
+  .google-reviews-btn .g-logo { width: 1.3rem; height: 1.3rem; flex-shrink: 0; }
+  .google-reviews-btn .g-rating { display: flex; flex-direction: column; line-height: 1.15; }
+  .google-reviews-btn .g-stars { color: var(--gold); font-size: 0.9rem; letter-spacing: 0.05em; }
+  .google-reviews-btn .g-count { font-size: 0.75rem; color: rgba(26,26,46,0.5); margin-top: 0.15rem; }
+  .google-reviews-btn .g-arrow { margin-left: 0.3rem; opacity: 0.5; transition: opacity 0.2s, transform 0.2s; }
+  .google-reviews-btn:hover .g-arrow { opacity: 1; transform: translateX(3px); }
+
+  /* UBICACION */
+  #ubicacion { background: #f0f4ff; }
+  .ubicacion-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .map-frame { width: 100%; height: 380px; border: 1px solid rgba(0,102,255,0.2); border-radius: 2px; overflow: hidden; }
+  .contact-info h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; margin-bottom: 2rem; }
+  .contact-row { display: flex; gap: 1rem; align-items: flex-start; padding: 1.2rem 0; border-bottom: 1px solid rgba(0,102,255,0.1); }
+  .contact-row:last-child { border-bottom: none; }
+  .contact-icon { font-size: 1.2rem; margin-top: 0.1rem; flex-shrink: 0; }
+  .contact-label { font-size: 0.75rem; color: rgba(26,26,46,0.4); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.3rem; }
+  .contact-value { font-size: 0.95rem; color: var(--white); font-weight: 400; }
+  .contact-value a { color: var(--red); text-decoration: none; }
+  .contact-value a:hover { text-decoration: underline; }
+
+  /* CTA */
+  .cta-banner { background: linear-gradient(135deg, #0044CC, #0077FF); padding: 5rem 4rem; text-align: center; position: relative; overflow: hidden; }
+  .cta-banner::before { content: 'FERCOR'; position: absolute; font-family: 'Bebas Neue', sans-serif; font-size: 18rem; color: rgba(255,255,255,0.04); top: 50%; left: 50%; transform: translate(-50%,-50%); white-space: nowrap; pointer-events: none; }
+  .cta-banner h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 6vw, 5rem); color: var(--white); margin-bottom: 1rem; position: relative; }
+  .cta-banner p { color: rgba(255,255,255,0.75); margin-bottom: 0.5rem; font-weight: 300; position: relative; }
+  .cta-free { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: var(--white); font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 2px; margin-bottom: 2rem; position: relative; }
+  .btn-white { display: inline-block; background: #fff; color: #0066FF; padding: 0.9rem 2.5rem; border-radius: 2px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; position: relative; transition: transform 0.15s, background 0.2s; }
+  .btn-white:hover { background: #fffaf0; transform: translateY(-2px); }
+
+  /* WHATSAPP — colors & shared */
+  :root { --wa: #25D366; --wa-dark: #1ebe57; }
+  .wa-icon { width: 1.1em; height: 1.1em; display: inline-block; vertical-align: -0.18em; fill: currentColor; }
+
+  /* Navbar WhatsApp button */
+  .nav-wa {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--wa); color: #fff; padding: 0.55rem 1.1rem;
+    border-radius: 2px; text-decoration: none;
+    font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;
+    transition: background 0.2s, transform 0.15s; white-space: nowrap;
+  }
+  .nav-wa:hover { background: var(--wa-dark); transform: translateY(-1px); }
+  .nav-wa .wa-icon { width: 1rem; height: 1rem; }
+
+  /* Hero WhatsApp button (prominent) */
+  .btn-wa {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: var(--wa); color: #fff;
+    padding: 0.9rem 2rem; border-radius: 2px; text-decoration: none;
+    font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.25);
+  }
+  .btn-wa:hover { background: var(--wa-dark); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(37,211,102,0.4); }
+  .btn-wa .wa-icon { width: 1.15rem; height: 1.15rem; }
+
+  /* Trial banner WhatsApp — stays on red gradient */
+  .trial-wa {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--wa); color: #fff; padding: 0.6rem 1.3rem;
+    border-radius: 2px; text-decoration: none;
+    font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;
+    transition: background 0.2s; white-space: nowrap;
+  }
+  .trial-wa:hover { background: var(--wa-dark); }
+  .trial-wa .wa-icon { width: 1rem; height: 1rem; }
+
+  /* CTA banner WhatsApp — white on red */
+  .btn-wa-white {
+    display: inline-flex; align-items: center; gap: 0.55rem;
+    background: #fff; color: var(--wa);
+    padding: 0.9rem 2.3rem; border-radius: 2px; text-decoration: none;
+    font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600;
+    transition: transform 0.15s, background 0.2s;
+    position: relative;
+  }
+  .btn-wa-white:hover { background: #f4fff7; transform: translateY(-2px); }
+  .btn-wa-white .wa-icon { width: 1.2rem; height: 1.2rem; }
+  .cta-btn-row { display: inline-flex; gap: 0.9rem; flex-wrap: wrap; justify-content: center; position: relative; }
+
+  /* Horarios info — WhatsApp line */
+  .horarios-info .wa-line {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    margin-top: 1rem; padding: 0.7rem 1.2rem;
+    background: var(--wa); color: #fff;
+    font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;
+    text-decoration: none; border-radius: 2px;
+    transition: background 0.2s;
+  }
+  .horarios-info .wa-line:hover { background: var(--wa-dark); }
+  .horarios-info .wa-line .wa-icon { width: 1rem; height: 1rem; }
+
+  /* Contact row WhatsApp link */
+  .contact-value .wa-link {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    color: var(--wa); font-weight: 500; text-decoration: none;
+  }
+  .contact-value .wa-link:hover { color: var(--wa-dark); }
+  .contact-value .wa-link .wa-icon { width: 0.95rem; height: 0.95rem; }
+
+  /* Interactive map */
+  .map-link {
+    position: relative; display: block; width: 100%; height: 380px;
+    border: 1px solid rgba(0,102,255,0.2); border-radius: 2px; overflow: hidden;
+    text-decoration: none; color: var(--white); cursor: pointer;
+    background: #fff;
+  }
+  .map-link iframe { width: 100%; height: 100%; border: 0; display: block; pointer-events: none; filter: grayscale(0.25) contrast(1.05); }
+  .map-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(13,13,13,0) 40%, rgba(13,13,13,0.85) 100%);
+    display: flex; align-items: flex-end; justify-content: space-between;
+    padding: 1.5rem; gap: 1rem; flex-wrap: wrap;
+    transition: background 0.25s;
+  }
+  .map-link:hover .map-overlay { background: linear-gradient(180deg, rgba(0,102,255,0.05) 0%, rgba(13,13,13,0.92) 100%); }
+  .map-cta-label {
+    font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.1em;
+    color: var(--white);
+  }
+  .map-cta-btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--red); color: #fff;
+    padding: 0.7rem 1.3rem; border-radius: 2px;
+    font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .map-link:hover .map-cta-btn { background: var(--red-dark); transform: translateY(-1px); }
+  .map-cta-btn svg { width: 0.95rem; height: 0.95rem; fill: currentColor; }
+  .map-pin {
+    position: absolute; top: 1rem; left: 1rem;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: rgba(13,13,13,0.78); backdrop-filter: blur(8px);
+    color: var(--white); font-size: 0.72rem; letter-spacing: 0.1em;
+    text-transform: uppercase; padding: 0.4rem 0.8rem; border-radius: 2px;
+    border: 1px solid rgba(0,102,255,0.3);
+  }
+
+  /* Floating WhatsApp */
+  .wa-float {
+    position: fixed; right: 1.5rem; bottom: 1.5rem; z-index: 200;
+    width: 58px; height: 58px; border-radius: 50%;
+    background: var(--wa); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(37,211,102,0.35), 0 2px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .wa-float:hover { transform: scale(1.08); box-shadow: 0 10px 30px rgba(37,211,102,0.5), 0 4px 12px rgba(0,0,0,0.35); }
+  .wa-float .wa-icon { width: 32px; height: 32px; }
+  .wa-float::before {
+    content: ''; position: absolute; inset: -6px;
+    border-radius: 50%; border: 2px solid var(--wa);
+    opacity: 0.6; animation: waPulse 2.2s ease-out infinite;
+    pointer-events: none;
+  }
+  @keyframes waPulse {
+    0%   { transform: scale(0.9); opacity: 0.6; }
+    70%  { transform: scale(1.35); opacity: 0; }
+    100% { transform: scale(1.35); opacity: 0; }
+  }
+  .wa-float-label {
+    position: absolute; right: 70px; top: 50%; transform: translateY(-50%);
+    background: #1a1a2e; color: #fff;
+    font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 0.5rem 0.9rem; border-radius: 2px;
+    border: 1px solid rgba(37,211,102,0.4);
+    white-space: nowrap;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.25s, transform 0.25s;
+  }
+  .wa-float:hover .wa-float-label { opacity: 1; transform: translateY(-50%) translateX(-4px); }
+
+  /* FOOTER */
+  footer { background: #0d1b3e; padding: 3rem 4rem; display: flex; justify-content: space-between; align-items: center; border-top: none; flex-wrap: wrap; gap: 1.5rem; }
+  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: #fff; letter-spacing: 0.1em; }
+  .footer-logo span { color: var(--red); }
+  .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.05em; }
+  .footer-links a:hover { color: var(--red); }
+  .footer-social { display: flex; gap: 1rem; align-items: center; }
+  .footer-social a { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.6); text-decoration: none; transition: border-color 0.2s, color 0.2s, background 0.2s; }
+  .footer-social a:hover { border-color: var(--red); color: var(--white); background: rgba(0,102,255,0.25); }
+  .footer-social svg { width: 18px; height: 18px; fill: currentColor; }
+
+  @media (max-width: 900px) {
+    nav { padding: 0.9rem 1rem; gap: 0.5rem; flex-wrap: nowrap; }
+    .nav-logo { font-size: 1.1rem; letter-spacing: 0.06em; white-space: nowrap; }
+    .nav-links { display: none; }
+    .nav-cta { display: none; }
+    .lang-switcher { gap: 0.25rem; }
+    .lang-btn { padding: 0.25rem 0.45rem; font-size: 0.65rem; letter-spacing: 0.05em; }
+    .nav-right { gap: 0.5rem; }
+    .nav-wa { padding: 0.45rem 0.7rem; font-size: 0.65rem; letter-spacing: 0.05em; gap: 0.35rem; }
+    .nav-wa .wa-icon { width: 0.9rem; height: 0.9rem; }
+    .nav-wa span { display: none; }
+    section { padding: 4rem 1.25rem; }
+    .hero { padding: 0 1.25rem; min-height: auto; padding-top: 6rem; padding-bottom: 3rem; }
+    .hero-accent { width: 300px; height: 300px; right: -150px; }
+    .hero-content { padding-top: 20px; max-width: 100%; }
+    .hero h1 {
+      font-size: clamp(2.5rem, 12vw, 4rem);
+      line-height: 0.95;
+      letter-spacing: 0;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+    .hero p { font-size: 1rem; }
+    .hero-btns { gap: 0.7rem; }
+    .btn-wa, .btn-primary, .btn-outline { padding: 0.8rem 1.4rem; font-size: 0.78rem; width: 100%; justify-content: center; text-align: center; }
+    .hero-stats { gap: 1.2rem; flex-wrap: wrap; margin-top: 2.5rem; }
+    .stat-num { font-size: 2rem; }
+    .trial-banner { padding: 1.5rem 1rem; gap: 1rem; }
+    .trial-banner .trial-text { font-size: 1.1rem; }
+    .horarios-wrap, .ubicacion-wrap, .trainers-wrap, .nutrition-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .facilities-grid { grid-template-columns: 1fr 1fr; }
+    .facility-item:first-child { grid-column: span 2; flex-direction: column; }
+    .facility-item:first-child .facility-photo { width: 100%; height: 200px; min-height: auto; }
+    .facility-item:first-child .facility-body { padding: 1.3rem 1.5rem; }
+    .facility-item:first-child .facility-name { font-size: 1.4rem; }
+    .facility-photo { height: 160px; }
+    .gym-gallery { flex-wrap: wrap; gap: 0.3rem; }
+    .gym-gallery img { min-width: 45%; height: 140px; flex: 1 1 45%; }
+    .nutrition-products { grid-template-columns: 1fr 1fr; }
+    .section-title { font-size: clamp(2rem, 8vw, 3rem); word-break: break-word; overflow-wrap: break-word; }
+    .nt-title { font-size: 1.5rem; word-break: break-word; overflow-wrap: break-word; }
+    .cta-banner { padding: 4rem 1rem; }
+    .cta-banner h2 { font-size: clamp(2rem, 9vw, 3.5rem); word-break: break-word; overflow-wrap: break-word; }
+    .cta-banner::before { font-size: 8rem; }
+    .btn-white, .btn-wa-white { width: 100%; max-width: 340px; justify-content: center; }
+    .cta-btn-row { flex-direction: column; align-items: center; width: 100%; }
+    footer { padding: 2rem 1rem; flex-direction: column; align-items: flex-start; }
+    .footer-links { flex-wrap: wrap; gap: 0.8rem 1.2rem; }
+    .wa-float { right: 1rem; bottom: 1rem; width: 54px; height: 54px; }
+    .wa-float .wa-icon { width: 28px; height: 28px; }
+    .wa-float-label { display: none; }
+    .map-link { height: 300px; }
+    .map-overlay { padding: 1rem; }
+    .trainer-quote { padding: 2rem 1.3rem; }
+    .trainer-quote::before { font-size: 5rem; left: 1rem; }
+  }
+  @media (max-width: 380px) {
+    .nav-logo { font-size: 1rem; }
+    .lang-btn { padding: 0.2rem 0.35rem; font-size: 0.6rem; }
+    .nav-wa { padding: 0.4rem 0.6rem; }
+    .hero h1 { font-size: clamp(2rem, 11vw, 3rem); }
+    .facilities-grid { grid-template-columns: 1fr; }
+    .facility-item:first-child { grid-column: span 1; }
+    .gym-gallery img { min-width: 100%; height: 120px; flex: 1 1 100%; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#"><span>Fercor</span> Sports Club</a>
+  <ul class="nav-links">
+    <li><a href="#servicios" data-i18n="nav_services">Servicios</a></li>
+    <li><a href="#entrenadores" data-i18n="nav_trainers">Entrenadores</a></li>
+    <li><a href="#horarios" data-i18n="nav_hours">Horarios</a></li>
+    <li><a href="#instalaciones" data-i18n="nav_facilities">Instalaciones</a></li>
+    <li><a href="#nutricion" data-i18n="nav_nutrition">Nutrición</a></li>
+    <li><a href="#ubicacion" data-i18n="nav_contact">Ubicación</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('es')">ES</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('ru')">RU</button>
+    </div>
+    <a class="nav-cta" href="tel:+34865817354" data-i18n="nav_call">Llámanos</a>
+    <a class="nav-wa" href="#" data-wa-msg="wa_msg_default" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.11 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.74.46 3.44 1.32 4.94L2 22l5.3-1.39a9.88 9.88 0 0 0 4.73 1.2h.01c5.46 0 9.9-4.44 9.9-9.9a9.8 9.8 0 0 0-2.83-6.99ZM12.04 20.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.15.83.84-3.07-.2-.31a8.18 8.18 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.24 8.24Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.8-.23-.08-.4-.13-.56.13-.17.25-.65.8-.8.97-.15.17-.3.19-.55.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.3.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.55-1.34-.76-1.84-.2-.48-.4-.41-.55-.42l-.47-.01c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.76 2.68 4.26 3.76.6.26 1.06.41 1.42.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29Z"/></svg>
+      <span data-i18n="nav_wa">WhatsApp</span>
+    </a>
+  </div>
+</nav>
+
+<section class="hero" id="inicio">
+  <div class="hero-grid"></div>
+  <div class="hero-bg"></div>
+  <div class="hero-accent"></div>
+  <div class="hero-content">
+    <span class="hero-tag">📍 Florida · Alicante</span>
+    <h1 data-i18n-html="hero_h1">ENTRENA.<br><em>SUPERA.</em><br>TRIUNFA.</h1>
+    <p data-i18n="hero_p">Fercor Sports Club es el espacio donde transformas tu cuerpo y superas tus límites. Instalaciones completas, entrenadores profesionales y un ambiente inigualable en el corazón del barrio Florida.</p>
+    <div class="hero-btns">
+      <a class="btn-wa" href="#" data-wa-msg="wa_msg_hero" target="_blank" rel="noopener">
+        <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.11 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.74.46 3.44 1.32 4.94L2 22l5.3-1.39a9.88 9.88 0 0 0 4.73 1.2h.01c5.46 0 9.9-4.44 9.9-9.9a9.8 9.8 0 0 0-2.83-6.99ZM12.04 20.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.15.83.84-3.07-.2-.31a8.18 8.18 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.24 8.24Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.8-.23-.08-.4-.13-.56.13-.17.25-.65.8-.8.97-.15.17-.3.19-.55.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.3.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.55-1.34-.76-1.84-.2-.48-.4-.41-.55-.42l-.47-.01c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.76 2.68 4.26 3.76.6.26 1.06.41 1.42.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29Z"/></svg>
+        <span data-i18n="hero_btn_wa">Reservar clase gratis</span>
+      </a>
+      <a class="btn-primary" href="#servicios" data-i18n="hero_btn1">Ver servicios</a>
+      <a class="btn-outline" href="#ubicacion" data-i18n="hero_btn2">Cómo llegar</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">4.5★</div>
+        <div class="stat-label" data-i18n="stat_rating">Valoración Google</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">77+</div>
+        <div class="stat-label" data-i18n="stat_reviews">Reseñas</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-i18n="stat_days_num">6 días</div>
+        <div class="stat-label" data-i18n="stat_days_label">Abierto por semana</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trial-banner">
+  <span class="trial-icon">🎁</span>
+  <div>
+    <div class="trial-text" data-i18n-html="trial_text">¡<span>Primera clase gratis!</span> — Ven y prueba sin compromiso</div>
+    <div class="trial-sub" data-i18n="trial_sub">Cualquier servicio disponible · Solo tienes que llamarnos o pasarte por el club</div>
+  </div>
+  <a class="trial-wa" href="#" data-wa-msg="wa_msg_trial" target="_blank" rel="noopener">
+    <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.11 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.74.46 3.44 1.32 4.94L2 22l5.3-1.39a9.88 9.88 0 0 0 4.73 1.2h.01c5.46 0 9.9-4.44 9.9-9.9a9.8 9.8 0 0 0-2.83-6.99ZM12.04 20.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.15.83.84-3.07-.2-.31a8.18 8.18 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.24 8.24Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.8-.23-.08-.4-.13-.56.13-.17.25-.65.8-.8.97-.15.17-.3.19-.55.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.3.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.55-1.34-.76-1.84-.2-.48-.4-.41-.55-.42l-.47-.01c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.76 2.68 4.26 3.76.6.26 1.06.41 1.42.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29Z"/></svg>
+    <span data-i18n="trial_btn_wa">Escribir por WhatsApp</span>
+  </a>
+  <a class="trial-btn" href="tel:+34865817354" data-i18n="trial_btn">Reservar gratis</a>
+</div>
+
+<section id="servicios">
+  <div class="services-header">
+    <div>
+      <p class="section-tag" data-i18n="services_tag">Lo que ofrecemos</p>
+      <h2 class="section-title" data-i18n="services_title">Servicios del club</h2>
+      <div class="divider"></div>
+      <p class="section-sub" data-i18n="services_sub">Instalaciones completas para todos los niveles: desde principiantes hasta deportistas avanzados. Buen ambiente, buena relación calidad-precio.</p>
+    </div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card"><span class="service-icon">💪</span><div class="service-name" data-i18n="s1_name">Sala de Pesas</div><p class="service-desc" data-i18n="s1_desc">Equipamiento completo de musculación y fuerza. Máquinas modernas y pesas libres para entrenar todos los grupos musculares.</p></div>
+    <div class="service-card"><span class="service-icon">🥊</span><div class="service-name" data-i18n="s2_name">MMA & K1</div><p class="service-desc" data-i18n="s2_desc">Ring profesional, tatami y sacos de impacto. Entrena artes marciales mixtas y kickboxing para mejorar tu forma física, técnica y confianza.</p></div>
+    <div class="service-card"><span class="service-icon">🏃</span><div class="service-name" data-i18n="s3_name">Cardio</div><p class="service-desc" data-i18n="s3_desc">Amplia zona de cardio con cintas de correr, bicicletas estáticas, elípticas y remos para mejorar tu resistencia y quemar calorías.</p></div>
+    <div class="service-card"><span class="service-icon">🧘</span><div class="service-name" data-i18n="s4_name">Actividades Dirigidas</div><p class="service-desc" data-i18n="s4_desc">Clases colectivas de fitness, yoga, pilates y más, con entrenadores cualificados adaptadas a todos los niveles.</p></div>
+    <div class="service-card"><span class="service-icon">🏋️</span><div class="service-name" data-i18n="s5_name">Entrenamiento Personal</div><p class="service-desc" data-i18n="s5_desc">Sesiones individuales con entrenadores personales certificados. Planificación personalizada para alcanzar tus objetivos más rápido.</p></div>
+    <div class="service-card"><span class="service-icon">🚿</span><div class="service-name" data-i18n="s6_name">Vestuarios</div><p class="service-desc" data-i18n="s6_desc">Vestuarios y duchas limpias y bien mantenidas para tu comodidad antes y después del entrenamiento.</p></div>
+  </div>
+</section>
+
+<section id="entrenadores">
+  <p class="section-tag" data-i18n="tr_tag">Profesionales a tu lado</p>
+  <h2 class="section-title" data-i18n="tr_title">Entrenadores Expertos</h2>
+  <div class="divider"></div>
+  <p class="section-sub" data-i18n="tr_sub">Nuestro equipo de profesionales altamente cualificados está aquí para guiarte en cada paso de tu camino hacia el bienestar.</p>
+  <div class="trainers-wrap">
+    <div class="trainer-features">
+      <div class="trainer-feature"><span class="trainer-feature-icon">🎓</span><div><div class="trainer-feature-title" data-i18n="tf1_title">Entrenadores Titulados</div><div class="trainer-feature-desc" data-i18n="tf1_desc">Todo nuestro equipo cuenta con titulación oficial en Ciencias del Deporte o certificaciones reconocidas a nivel nacional.</div></div></div>
+      <div class="trainer-feature"><span class="trainer-feature-icon">📋</span><div><div class="trainer-feature-title" data-i18n="tf2_title">Plan Personalizado</div><div class="trainer-feature-desc" data-i18n="tf2_desc">Cada cliente recibe un programa adaptado a sus objetivos, nivel físico y disponibilidad de tiempo.</div></div></div>
+      <div class="trainer-feature"><span class="trainer-feature-icon">📈</span><div><div class="trainer-feature-title" data-i18n="tf3_title">Seguimiento de Progreso</div><div class="trainer-feature-desc" data-i18n="tf3_desc">Mediciones periódicas y ajustes de rutina para asegurar avances continuos y motivarte a superar tus metas.</div></div></div>
+      <div class="trainer-feature"><span class="trainer-feature-icon">🥗</span><div><div class="trainer-feature-title" data-i18n="tf4_title">Asesoramiento Nutricional</div><div class="trainer-feature-desc" data-i18n="tf4_desc">Orientación sobre nutrición deportiva para complementar tu entrenamiento y maximizar los resultados.</div></div></div>
+    </div>
+    <div class="trainer-quote">
+      <p data-i18n="tq_text">El gimnasio está bastante bien equipado para trabajar en todos los grupos musculares. Buen ambiente y un equipo de profesionales que realmente se preocupa por tus resultados. Una buena opción para ponerte en forma con excelente relación calidad-precio.</p>
+      <cite data-i18n="tq_cite">— Opiniones reales de nuestros socios</cite>
+    </div>
+  </div>
+</section>
+
+<section id="horarios">
+  <div class="horarios-wrap">
+    <div>
+      <p class="section-tag" data-i18n="h_tag">Cuándo visitarnos</p>
+      <h2 class="section-title" data-i18n="h_title">Horarios de apertura</h2>
+      <div class="divider"></div>
+      <div class="live-status" id="live-status">
+        <span class="live-dot"></span>
+        <span class="live-text" data-i18n="live_checking">Comprobando horario…</span>
+      </div>
+      <table class="schedule-table">
+        <tr data-day="1"><td data-i18n="day_mon">Lunes</td><td>8:00 – 22:00</td></tr>
+        <tr data-day="2"><td data-i18n="day_tue">Martes</td><td>8:00 – 22:00</td></tr>
+        <tr data-day="3"><td data-i18n="day_wed">Miércoles</td><td>8:00 – 22:00</td></tr>
+        <tr data-day="4"><td data-i18n="day_thu">Jueves</td><td>8:00 – 22:00</td></tr>
+        <tr data-day="5"><td data-i18n="day_fri">Viernes</td><td>8:00 – 22:00</td></tr>
+        <tr data-day="6"><td data-i18n="day_sat">Sábado</td><td>10:00 – 14:00</td></tr>
+        <tr class="closed" data-day="0"><td data-i18n="day_sun">Domingo</td><td data-i18n="closed">Cerrado</td></tr>
+      </table>
+    </div>
+    <div>
+      <div class="horarios-info">
+        <h3 data-i18n="hi_title">¿Tienes alguna pregunta?</h3>
+        <p data-i18n="hi_p1">Llámanos directamente o pásate por el club. Nuestro equipo estará encantado de informarte sobre tarifas, inscripciones, clases y actividades disponibles.</p>
+        <p style="margin-top:1rem" data-i18n="hi_p2">Estamos en la Calle Grado, en pleno barrio Florida de Alicante. Fácil acceso en transporte público y buenas conexiones desde el centro.</p>
+        <p style="margin-top:1rem;color:rgba(245,242,236,0.4);font-size:0.8rem" data-i18n="hi_p3">¡Recuerda! La primera clase es completamente gratis. Ven sin compromiso y descubre tu nuevo gimnasio.</p>
+        <a class="tel" href="tel:+34865817354">+34 865 817 354</a>
+        <a class="wa-line" href="#" data-wa-msg="wa_msg_hours" target="_blank" rel="noopener">
+          <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.11 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.74.46 3.44 1.32 4.94L2 22l5.3-1.39a9.88 9.88 0 0 0 4.73 1.2h.01c5.46 0 9.9-4.44 9.9-9.9a9.8 9.8 0 0 0-2.83-6.99ZM12.04 20.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.15.83.84-3.07-.2-.31a8.18 8.18 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.24 8.24Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.8-.23-.08-.4-.13-.56.13-.17.25-.65.8-.8.97-.15.17-.3.19-.55.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.3.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.55-1.34-.76-1.84-.2-.48-.4-.41-.55-.42l-.47-.01c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.76 2.68 4.26 3.76.6.26 1.06.41 1.42.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29Z"/></svg>
+          <span data-i18n="hi_wa_btn">Escríbenos por WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="instalaciones">
+  <p class="section-tag" data-i18n="fac_tag">Nuestro espacio</p>
+  <h2 class="section-title" data-i18n="fac_title">Instalaciones</h2>
+  <div class="divider"></div>
+  <p class="section-sub" data-i18n="fac_sub">Un espacio deportivo completo con zonas diferenciadas para cada disciplina y cada objetivo.</p>
+  <div class="gym-gallery">
+    <img src="photos/gym-weights.jpg" alt="Zona de pesas" loading="lazy">
+    <img src="photos/gym-overview.jpg" alt="Vista general del gimnasio" loading="lazy">
+    <img src="photos/gym-freeweights.jpg" alt="Peso libre" loading="lazy">
+    <img src="photos/cardio-bikes.jpg" alt="Zona cardio" loading="lazy">
+  </div>
+  <div class="facilities-grid">
+    <div class="facility-item">
+      <img class="facility-photo" src="photos/gym-dumbbells.jpg" alt="Zona de Musculación" loading="lazy">
+      <div class="facility-body"><div class="facility-name" data-i18n="fac1_name">Zona de Musculación</div><div class="facility-text" data-i18n="fac1_text">Equipamiento moderno de pesas libres y máquinas para todo tipo de entrenamiento de fuerza, tonificación e hipertrofia.</div></div>
+    </div>
+    <div class="facility-item">
+      <img class="facility-photo" src="photos/ring-mma.jpg" alt="Sala de MMA" loading="lazy">
+      <div class="facility-body"><div class="facility-name" data-i18n="fac2_name">Sala de MMA</div><div class="facility-text" data-i18n="fac2_text">Ring profesional con tatami, sacos pesados, guantes y protecciones. Entrenamientos de artes marciales mixtas para principiantes y avanzados.</div></div>
+    </div>
+    <div class="facility-item">
+      <img class="facility-photo" src="photos/tatami-bags.jpg" alt="Sala de K1" loading="lazy">
+      <div class="facility-body"><div class="facility-name" data-i18n="fac3_name">Sala de K1</div><div class="facility-text" data-i18n="fac3_text">Zona amplia con tatami y sacos de impacto para kickboxing y K1. Técnica de golpeo, combinaciones y sparring controlado.</div></div>
+    </div>
+    <div class="facility-item">
+      <img class="facility-photo" src="photos/cardio-treadmills.jpg" alt="Zona Cardio" loading="lazy">
+      <div class="facility-body"><div class="facility-name" data-i18n="fac4_name">Zona Cardio</div><div class="facility-text" data-i18n="fac4_text">Cintas, bicicletas estáticas, elípticas y remos. Ideal para calentar, quemar grasa y mejorar la resistencia.</div></div>
+    </div>
+    <div class="facility-item">
+      <img class="facility-photo" src="photos/lockers.jpg" alt="Vestuarios" loading="lazy">
+      <div class="facility-body"><div class="facility-name" data-i18n="fac5_name">Vestuarios</div><div class="facility-text" data-i18n="fac5_text">Vestuarios separados con duchas, taquillas y zona de aseo. Siempre limpios y bien mantenidos.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="nutricion">
+  <p class="section-tag" data-i18n="nut_tag">Combustible para tu rendimiento</p>
+  <h2 class="section-title" data-i18n="nut_title">Nutrición Deportiva</h2>
+  <div class="divider"></div>
+  <div class="nutrition-grid">
+    <div class="nutrition-text">
+      <img class="nutrition-photo" src="photos/nutrition-shop.jpg" alt="Nutrición deportiva — tienda en el gimnasio" loading="lazy">
+      <div class="nt-title" data-i18n-html="nut_headline">Todo lo que necesitas<br><span>bajo el mismo techo</span><br>al mejor precio</div>
+      <p data-i18n="nut_p1">En Fercor Sports Club encontrarás una selección de productos de nutrición deportiva disponibles a la venta directamente en el club.</p>
+      <p data-i18n="nut_p2">Nuestros entrenadores también pueden asesorarte sobre qué productos se adaptan mejor a tus objetivos y rutina de ejercicio.</p>
+    </div>
+    <div class="nutrition-products">
+      <div class="nutrition-item"><span class="n-icon">🥛</span><div class="n-name" data-i18n="n1_name">Proteínas</div><div class="n-desc" data-i18n="n1_desc">Whey, proteína vegana y caseína para recuperación muscular</div></div>
+      <div class="nutrition-item"><span class="n-icon">⚡</span><div class="n-name" data-i18n="n2_name">Pre-entreno</div><div class="n-desc" data-i18n="n2_desc">Fórmulas de energía y resistencia para maximizar tu rendimiento</div></div>
+      <div class="nutrition-item"><span class="n-icon">🍫</span><div class="n-name" data-i18n="n3_name">Barritas & Snacks</div><div class="n-desc" data-i18n="n3_desc">Snacks proteicos y energéticos para antes y después del gym</div></div>
+      <div class="nutrition-item"><span class="n-icon">💊</span><div class="n-name" data-i18n="n4_name">Vitaminas & BCAA</div><div class="n-desc" data-i18n="n4_desc">Suplementos para apoyar la salud y la recuperación muscular</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="resenas">
+  <p class="section-tag" data-i18n="rev_tag">Lo que dicen nuestros socios</p>
+  <h2 class="section-title" data-i18n="rev_title">Opiniones Reales</h2>
+  <div class="divider"></div>
+  <div class="reviews-grid">
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text" data-i18n="rev1_text">Una buena opción para ponerte en forma en un gimnasio con buen ambiente. Lo recomiendo por la calidad-precio. Profesionales muy atentos y motivadores.</p><div class="review-author">Juan Carlos Gálvez Rodríguez</div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text" data-i18n="rev2_text">El gimnasio está bastante bien equipado para trabajar en todos los grupos musculares. Buen ambiente y un personal muy profesional.</p><div class="review-author">Roberto Carlos Cerruela</div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text" data-i18n="rev3_text">Instalaciones completas, ambiente familiar y precios razonables. Los entrenadores son muy atentos y siempre están disponibles para resolver dudas.</p><div class="review-author" data-i18n="rev3_author">Socio de Fercor Sports Club</div></div>
+  </div>
+  <div class="reviews-cta">
+    <a class="google-reviews-btn" href="https://www.google.com/maps/search/?api=1&query=Fercor+Sports+Club+Betis-Florida+Carrer+Grado+8+Alicante" target="_blank" rel="noopener">
+      <svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true">
+        <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+        <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+        <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+        <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+      </svg>
+      <span class="g-rating">
+        <span class="g-stars">★★★★★ 4.5</span>
+        <span class="g-count" data-i18n="g_count">Ver 77 reseñas en Google</span>
+      </span>
+      <svg class="g-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<section id="ubicacion">
+  <p class="section-tag" data-i18n="loc_tag">Dónde estamos</p>
+  <h2 class="section-title" data-i18n="loc_title">Ubicación</h2>
+  <div class="divider"></div>
+  <div class="ubicacion-wrap">
+    <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=Fercor+Sports+Club+Carrer+Grado+8+Alicante&destination_place_id=" target="_blank" rel="noopener" aria-label="Ver ruta en Google Maps">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d793.1!2d-0.5106352!3d38.344266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDIwJzM5LjQiTiAwwrAzMCczOC4zIlc!5e0!3m2!1ses!2ses!4v1" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" tabindex="-1" aria-hidden="true"></iframe>
+      <span class="map-pin">📍 <span data-i18n="map_pin">Carrer Grado, 8</span></span>
+      <span class="map-overlay">
+        <span class="map-cta-label" data-i18n="map_click">Haz clic para abrir la ruta</span>
+        <span class="map-cta-btn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.71 11.29 12.71 2.29a1 1 0 0 0-1.42 0l-9 9a1 1 0 0 0 0 1.42l9 9a1 1 0 0 0 1.42 0l9-9a1 1 0 0 0 0-1.42ZM14 14.5V12h-4v3H8v-4a1 1 0 0 1 1-1h5V7.5l3.5 3.5Z"/></svg>
+          <span data-i18n="map_btn">Cómo llegar</span>
+        </span>
+      </span>
+    </a>
+    <div class="contact-info">
+      <h3>Fercor Sports Club</h3>
+      <div class="contact-row"><span class="contact-icon">📍</span><div><div class="contact-label" data-i18n="c_address">Dirección</div><div class="contact-value">Carrer Grado, 8<br>03007 Alacant, Alicante</div></div></div>
+      <div class="contact-row"><span class="contact-icon">📞</span><div><div class="contact-label" data-i18n="c_phone">Teléfono</div><div class="contact-value"><a href="tel:+34865817354">+34 865 817 354</a></div></div></div>
+      <div class="contact-row"><span class="contact-icon">💬</span><div><div class="contact-label" data-i18n="c_wa">WhatsApp</div><div class="contact-value"><a class="wa-link" href="#" data-wa-msg="wa_msg_contact" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.11 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.74.46 3.44 1.32 4.94L2 22l5.3-1.39a9.88 9.88 0 0 0 4.73 1.2h.01c5.46 0 9.9-4.44 9.9-9.9a9.8 9.8 0 0 0-2.83-6.99ZM12.04 20.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.15.83.84-3.07-.2-.31a8.18 8.18 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.24 8.24Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.8-.23-.08-.4-.13-.56.13-.17.25-.65.8-.8.97-.15.17-.3.19-.55.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.3.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.55-1.34-.76-1.84-.2-.48-.4-.41-.55-.42l-.47-.01c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.76 2.68 4.26 3.76.6.26 1.06.41 1.42.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29Z"/></svg><span data-i18n="c_wa_val">Escribir ahora</span></a></div></div></div>
+      <div class="contact-row"><span class="contact-icon">🕐</span><div><div class="contact-label" data-i18n="c_hours">Horario</div><div class="contact-value" data-i18n-html="c_hours_val">Lunes – Viernes: 8:00 – 22:00<br>Sábado: 10:00 – 14:00<br>Domingo: Cerrado</div></div></div>
+      <div class="contact-row"><span class="contact-icon">🚌</span><div><div class="contact-label" data-i18n="c_transport">Cómo llegar</div><div class="contact-value" data-i18n-html="c_transport_val">Barrio Florida, Alicante<br>Accesible en transporte público</div></div></div>
+      <div class="contact-row"><span class="contact-icon">🎁</span><div><div class="contact-label" data-i18n="c_offer">Oferta de bienvenida</div><div class="contact-value" style="color:var(--red);font-weight:500" data-i18n="c_offer_val">Primera clase 100% gratuita</div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <h2 data-i18n="cta_h2">EMPIEZA HOY MISMO</h2>
+  <p data-i18n="cta_p">Tu mejor versión te está esperando en Fercor Sports Club</p>
+  <div class="cta-free" data-i18n="cta_free">🎁 Primera clase completamente gratis — sin compromiso</div>
+  <br>
+  <div class="cta-btn-row">
+    <a class="btn-white" href="tel:+34865817354" data-i18n="cta_btn">Llamar ahora · +34 865 817 354</a>
+    <a class="btn-wa-white" href="#" data-wa-msg="wa_msg_cta" target="_blank" rel="noopener">
+      <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.11 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.74.46 3.44 1.32 4.94L2 22l5.3-1.39a9.88 9.88 0 0 0 4.73 1.2h.01c5.46 0 9.9-4.44 9.9-9.9a9.8 9.8 0 0 0-2.83-6.99ZM12.04 20.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.15.83.84-3.07-.2-.31a8.18 8.18 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.24 8.24Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.8-.23-.08-.4-.13-.56.13-.17.25-.65.8-.8.97-.15.17-.3.19-.55.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.3.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.55-1.34-.76-1.84-.2-.48-.4-.41-.55-.42l-.47-.01c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.76 2.68 4.26 3.76.6.26 1.06.41 1.42.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29Z"/></svg>
+      <span data-i18n="cta_wa">WhatsApp</span>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo"><span>Fercor</span> Sports Club</div>
+  <div class="footer-copy" data-i18n="footer_copy">© 2025 Fercor Sports Club · Alicante · Todos los derechos reservados</div>
+  <div class="footer-links">
+    <a href="#inicio" data-i18n="nav_home">Inicio</a>
+    <a href="#servicios" data-i18n="nav_services">Servicios</a>
+    <a href="#entrenadores" data-i18n="nav_trainers">Entrenadores</a>
+    <a href="#horarios" data-i18n="nav_hours">Horarios</a>
+    <a href="#nutricion" data-i18n="nav_nutrition">Nutrición</a>
+    <a href="#ubicacion" data-i18n="nav_contact">Contacto</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/gymfercor.bf/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85 0 3.2-.01 3.58-.07 4.85-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85 0-3.2.01-3.58.07-4.85C2.38 3.86 3.9 2.31 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16ZM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.7.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.63-6.78-6.98-6.98C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84ZM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4Zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44Z"/></svg>
+    </a>
+    <a href="https://www.tiktok.com/@gym_fercor" target="_blank" rel="noopener" aria-label="TikTok">
+      <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78 2.93 2.93 0 0 1 .88.13v-3.5a6.37 6.37 0 0 0-.88-.07A6.34 6.34 0 0 0 3.15 15.3a6.34 6.34 0 0 0 10.86 4.44 6.27 6.27 0 0 0 1.86-4.48V8.73a8.22 8.22 0 0 0 4.72 1.49V6.78a4.86 4.86 0 0 1-1-.09Z"/></svg>
+    </a>
+  </div>
+</footer>
+
+<a class="wa-float" href="#" data-wa-msg="wa_msg_float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.11 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.74.46 3.44 1.32 4.94L2 22l5.3-1.39a9.88 9.88 0 0 0 4.73 1.2h.01c5.46 0 9.9-4.44 9.9-9.9a9.8 9.8 0 0 0-2.83-6.99ZM12.04 20.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.15.83.84-3.07-.2-.31a8.18 8.18 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.24 8.24Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.8-.23-.08-.4-.13-.56.13-.17.25-.65.8-.8.97-.15.17-.3.19-.55.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.3.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.55-1.34-.76-1.84-.2-.48-.4-.41-.55-.42l-.47-.01c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.76 2.68 4.26 3.76.6.26 1.06.41 1.42.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29Z"/></svg>
+  <span class="wa-float-label" data-i18n="wa_float_label">Escríbenos en WhatsApp</span>
+</a>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthClub",
+  "name": "Fercor Sports Club",
+  "alternateName": "Gimnasio Fercor Betis-Florida",
+  "description": "Gimnasio completo en el barrio Florida de Alicante: pesas, MMA, K1, cardio, clases dirigidas, entrenamiento personal y nutrición deportiva. Primera clase gratis.",
+  "url": "https://kgarnikg.github.io/Betis-Florida/",
+  "image": "https://kgarnikg.github.io/Betis-Florida/og-image.jpg",
+  "telephone": "+34865817354",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Carrer Grado, 8",
+    "addressLocality": "Alicante",
+    "addressRegion": "Comunidad Valenciana",
+    "postalCode": "03007",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 38.344266,
+    "longitude": -0.510635
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "22:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "10:00",
+      "closes": "14:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "77",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Sala de musculación", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Sala de MMA", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Sala de K1 / Kickboxing", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Zona cardio", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Clases dirigidas", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Entrenamiento personal", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Vestuarios con duchas", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Nutrición deportiva", "value": true }
+  ],
+  "sameAs": [
+    "https://www.google.com/maps/search/?api=1&query=Fercor+Sports+Club+Betis-Florida+Carrer+Grado+8+Alicante"
+  ]
+}
+</script>
+
+<script>
+const i18n = {
+  es: {
+    nav_home:"Inicio", nav_services:"Servicios", nav_trainers:"Entrenadores", nav_hours:"Horarios", nav_facilities:"Instalaciones", nav_nutrition:"Nutrición", nav_contact:"Ubicación", nav_call:"Llámanos", nav_wa:"WhatsApp",
+    hero_h1:"ENTRENA.<br><em>SUPERA.</em><br>TRIUNFA.",
+    hero_p:"Fercor Sports Club es el espacio donde transformas tu cuerpo y superas tus límites. Instalaciones completas, entrenadores profesionales y un ambiente inigualable en el corazón del barrio Florida.",
+    hero_btn1:"Ver servicios", hero_btn2:"Cómo llegar", hero_btn_wa:"Reservar clase gratis",
+    stat_rating:"Valoración Google", stat_reviews:"Reseñas", stat_days_num:"6 días", stat_days_label:"Abierto por semana",
+    trial_text:"¡<span>Primera clase gratis!</span> — Ven y prueba sin compromiso",
+    trial_sub:"Cualquier servicio disponible · Solo tienes que llamarnos o pasarte por el club", trial_btn:"Reservar gratis", trial_btn_wa:"Escribir por WhatsApp",
+    services_tag:"Lo que ofrecemos", services_title:"Servicios del club", services_sub:"Instalaciones completas para todos los niveles: desde principiantes hasta deportistas avanzados. Buen ambiente, buena relación calidad-precio.",
+    s1_name:"Sala de Pesas", s1_desc:"Equipamiento completo de musculación y fuerza. Máquinas modernas y pesas libres para entrenar todos los grupos musculares.",
+    s2_name:"MMA & K1", s2_desc:"Ring profesional, tatami y sacos de impacto. Entrena artes marciales mixtas y kickboxing para mejorar tu forma física, técnica y confianza.",
+    s3_name:"Cardio", s3_desc:"Amplia zona de cardio con cintas de correr, bicicletas estáticas, elípticas y remos para mejorar tu resistencia y quemar calorías.",
+    s4_name:"Actividades Dirigidas", s4_desc:"Clases colectivas de fitness, yoga, pilates y más, con entrenadores cualificados adaptadas a todos los niveles.",
+    s5_name:"Entrenamiento Personal", s5_desc:"Sesiones individuales con entrenadores personales certificados. Planificación personalizada para alcanzar tus objetivos más rápido.",
+    s6_name:"Vestuarios", s6_desc:"Vestuarios y duchas limpias y bien mantenidas para tu comodidad antes y después del entrenamiento.",
+    tr_tag:"Profesionales a tu lado", tr_title:"Entrenadores Expertos", tr_sub:"Nuestro equipo de profesionales altamente cualificados está aquí para guiarte en cada paso de tu camino hacia el bienestar.",
+    tf1_title:"Entrenadores Titulados", tf1_desc:"Todo nuestro equipo cuenta con titulación oficial en Ciencias del Deporte o certificaciones reconocidas a nivel nacional.",
+    tf2_title:"Plan Personalizado", tf2_desc:"Cada cliente recibe un programa adaptado a sus objetivos, nivel físico y disponibilidad de tiempo.",
+    tf3_title:"Seguimiento de Progreso", tf3_desc:"Mediciones periódicas y ajustes de rutina para asegurar avances continuos y motivarte a superar tus metas.",
+    tf4_title:"Asesoramiento Nutricional", tf4_desc:"Orientación sobre nutrición deportiva para complementar tu entrenamiento y maximizar los resultados.",
+    tq_text:"El gimnasio está bastante bien equipado para trabajar en todos los grupos musculares. Buen ambiente y un equipo de profesionales que realmente se preocupa por tus resultados. Una buena opción para ponerte en forma con excelente relación calidad-precio.",
+    tq_cite:"— Opiniones reales de nuestros socios",
+    h_tag:"Cuándo visitarnos", h_title:"Horarios de apertura",
+    day_mon:"Lunes", day_tue:"Martes", day_wed:"Miércoles", day_thu:"Jueves", day_fri:"Viernes", day_sat:"Sábado", day_sun:"Domingo",
+    badge_open:"Abierto", closed:"Cerrado",
+    live_checking:"Comprobando horario…",
+    live_open_until:"Abierto ahora · Cierra a las {time}",
+    live_closed_today:"Cerrado ahora · Abre mañana a las {time}",
+    live_closed_sunday:"Cerrado los domingos · Abre el lunes a las 8:00",
+    live_closes_soon:"¡Cierra pronto! · Hasta las {time}",
+    hi_title:"¿Tienes alguna pregunta?",
+    hi_p1:"Llámanos directamente o pásate por el club. Nuestro equipo estará encantado de informarte sobre tarifas, inscripciones, clases y actividades disponibles.",
+    hi_p2:"Estamos en la Calle Grado, en pleno barrio Florida de Alicante. Fácil acceso en transporte público y buenas conexiones desde el centro.",
+    hi_p3:"¡Recuerda! La primera clase es completamente gratis. Ven sin compromiso y descubre tu nuevo gimnasio.", hi_wa_btn:"Escríbenos por WhatsApp",
+    fac_tag:"Nuestro espacio", fac_title:"Instalaciones", fac_sub:"Un espacio deportivo completo con zonas diferenciadas para cada disciplina y cada objetivo.",
+    fac1_name:"Zona de Musculación", fac1_text:"Equipamiento moderno de pesas libres y máquinas para todo tipo de entrenamiento de fuerza, tonificación e hipertrofia.",
+    fac2_name:"Sala de MMA", fac2_text:"Ring profesional con tatami, sacos pesados, guantes y protecciones. Entrenamientos de artes marciales mixtas para principiantes y avanzados.",
+    fac3_name:"Sala de K1", fac3_text:"Zona amplia con tatami y sacos de impacto para kickboxing y K1. Técnica de golpeo, combinaciones y sparring controlado.",
+    fac4_name:"Zona Cardio", fac4_text:"Cintas, bicicletas estáticas, elípticas y remos. Ideal para calentar, quemar grasa y mejorar la resistencia.",
+    fac5_name:"Vestuarios", fac5_text:"Vestuarios separados con duchas, taquillas y zona de aseo. Siempre limpios y bien mantenidos.",
+    nut_tag:"Combustible para tu rendimiento", nut_title:"Nutrición Deportiva",
+    nut_headline:"Todo lo que necesitas<br><span>bajo el mismo techo</span><br>al mejor precio",
+    nut_p1:"En Fercor Sports Club encontrarás una selección de productos de nutrición deportiva disponibles a la venta directamente en el club.",
+    nut_p2:"Nuestros entrenadores también pueden asesorarte sobre qué productos se adaptan mejor a tus objetivos y rutina de ejercicio.",
+    n1_name:"Proteínas", n1_desc:"Whey, proteína vegana y caseína para recuperación muscular",
+    n2_name:"Pre-entreno", n2_desc:"Fórmulas de energía y resistencia para maximizar tu rendimiento",
+    n3_name:"Barritas & Snacks", n3_desc:"Snacks proteicos y energéticos para antes y después del gym",
+    n4_name:"Vitaminas & BCAA", n4_desc:"Suplementos para apoyar la salud y la recuperación muscular",
+    rev_tag:"Lo que dicen nuestros socios", rev_title:"Opiniones Reales", g_count:"Ver 77 reseñas en Google",
+    rev1_text:"Una buena opción para ponerte en forma en un gimnasio con buen ambiente. Lo recomiendo por la calidad-precio. Profesionales muy atentos y motivadores.",
+    rev2_text:"El gimnasio está bastante bien equipado para trabajar en todos los grupos musculares. Buen ambiente y un personal muy profesional.",
+    rev3_text:"Instalaciones completas, ambiente familiar y precios razonables. Los entrenadores son muy atentos y siempre están disponibles para resolver dudas.",
+    rev3_author:"Socio de Fercor Sports Club",
+    loc_tag:"Dónde estamos", loc_title:"Ubicación",
+    c_address:"Dirección", c_phone:"Teléfono", c_hours:"Horario",
+    c_hours_val:"Lunes – Viernes: 8:00 – 22:00<br>Sábado: 10:00 – 14:00<br>Domingo: Cerrado",
+    c_transport:"Cómo llegar", c_transport_val:"Barrio Florida, Alicante<br>Accesible en transporte público",
+    c_offer:"Oferta de bienvenida", c_offer_val:"Primera clase 100% gratuita",
+    cta_h2:"EMPIEZA HOY MISMO", cta_p:"Tu mejor versión te está esperando en Fercor Sports Club",
+    cta_free:"🎁 Primera clase completamente gratis — sin compromiso", cta_btn:"Llamar ahora · +34 865 817 354", cta_wa:"WhatsApp",
+    c_wa:"WhatsApp", c_wa_val:"Escribir ahora",
+    map_pin:"Carrer Grado, 8", map_click:"Haz clic para abrir la ruta", map_btn:"Cómo llegar",
+    wa_float_label:"Escríbenos en WhatsApp",
+    wa_msg_default:"¡Hola! Me gustaría más información sobre Fercor Sports Club.",
+    wa_msg_hero:"¡Hola! Quiero reservar mi primera clase gratis en Fercor Sports Club.",
+    wa_msg_trial:"¡Hola! Vi la promo de la primera clase gratis y quiero apuntarme.",
+    wa_msg_hours:"¡Hola! Tengo una pregunta sobre horarios y tarifas.",
+    wa_msg_contact:"¡Hola! Me gustaría más información sobre el gimnasio.",
+    wa_msg_cta:"¡Hola! Quiero empezar en Fercor Sports Club y reservar mi clase gratis.",
+    wa_msg_float:"¡Hola! Me gustaría más información sobre Fercor Sports Club.",
+    footer_copy:"© 2025 Fercor Sports Club · Alicante · Todos los derechos reservados"
+  },
+
+  en: {
+    nav_home:"Home", nav_services:"Services", nav_trainers:"Trainers", nav_hours:"Hours", nav_facilities:"Facilities", nav_nutrition:"Nutrition", nav_contact:"Location", nav_call:"Call Us", nav_wa:"WhatsApp",
+    hero_h1:"TRAIN.<br><em>EXCEED.</em><br>TRIUMPH.",
+    hero_p:"Fercor Sports Club is the place where you transform your body and push past your limits. Full facilities, professional coaches and an unbeatable atmosphere in the heart of the Florida neighbourhood.",
+    hero_btn1:"View services", hero_btn2:"Get directions", hero_btn_wa:"Book free class",
+    stat_rating:"Google rating", stat_reviews:"Reviews", stat_days_num:"6 days", stat_days_label:"Open per week",
+    trial_text:"🎁 <span>First class FREE!</span> — Try with no commitment",
+    trial_sub:"Any service available · Just call us or drop by the club", trial_btn:"Book for free", trial_btn_wa:"Chat on WhatsApp",
+    services_tag:"What we offer", services_title:"Club Services", services_sub:"Full facilities for all levels — from beginners to advanced athletes. Great atmosphere, great value.",
+    s1_name:"Weight Room", s1_desc:"Complete strength and bodybuilding equipment. Modern machines and free weights to train every muscle group.",
+    s2_name:"MMA & K1", s2_desc:"Professional ring, tatami and impact bags. Train mixed martial arts and kickboxing to boost your fitness, technique and confidence.",
+    s3_name:"Cardio", s3_desc:"Large cardio zone with treadmills, stationary bikes, ellipticals and rowing machines to boost endurance and burn calories.",
+    s4_name:"Group Classes", s4_desc:"Collective fitness, yoga, pilates and more, led by qualified coaches adapted to all levels.",
+    s5_name:"Personal Training", s5_desc:"One-on-one sessions with certified personal trainers. Customised programming to reach your goals faster.",
+    s6_name:"Changing Rooms", s6_desc:"Clean, well-maintained changing rooms and showers for your comfort before and after training.",
+    tr_tag:"Professionals by your side", tr_title:"Expert Trainers", tr_sub:"Our highly qualified team is here to guide you every step of the way on your journey to wellbeing.",
+    tf1_title:"Certified Trainers", tf1_desc:"Every member of our team holds an official degree in Sports Science or a nationally recognised certification.",
+    tf2_title:"Personalised Plan", tf2_desc:"Each client receives a programme tailored to their goals, fitness level and available time.",
+    tf3_title:"Progress Tracking", tf3_desc:"Regular measurements and routine adjustments to ensure continuous progress and keep you motivated.",
+    tf4_title:"Nutrition Advice", tf4_desc:"Sports nutrition guidance to complement your training and maximise your results.",
+    tq_text:"The gym is very well equipped to work all muscle groups. Great atmosphere and a team of professionals who truly care about your results. A great choice for getting in shape with excellent value for money.",
+    tq_cite:"— Real reviews from our members",
+    h_tag:"When to visit", h_title:"Opening Hours",
+    day_mon:"Monday", day_tue:"Tuesday", day_wed:"Wednesday", day_thu:"Thursday", day_fri:"Friday", day_sat:"Saturday", day_sun:"Sunday",
+    badge_open:"Open", closed:"Closed",
+    live_checking:"Checking hours…",
+    live_open_until:"Open now · Closes at {time}",
+    live_closed_today:"Closed now · Opens tomorrow at {time}",
+    live_closed_sunday:"Closed on Sundays · Opens Monday at 8:00",
+    live_closes_soon:"Closing soon! · Until {time}",
+    hi_title:"Have a question?",
+    hi_p1:"Call us directly or stop by the club. Our team will be happy to inform you about pricing, memberships, classes and activities.",
+    hi_p2:"We are on Calle Grado, in the heart of the Florida neighbourhood in Alicante. Easy public transport access and great connections from the city centre.",
+    hi_p3:"Remember! The first class is completely free. Come with no commitment and discover your new gym.", hi_wa_btn:"Message us on WhatsApp",
+    fac_tag:"Our space", fac_title:"Facilities", fac_sub:"A complete sports complex with dedicated zones for every discipline and every goal.",
+    fac1_name:"Weight Zone", fac1_text:"Modern free weights and machines for all types of strength, toning and hypertrophy training.",
+    fac2_name:"MMA Room", fac2_text:"Professional ring with tatami, heavy bags, gloves and protective gear. Mixed martial arts training for beginners and advanced fighters.",
+    fac3_name:"K1 Room", fac3_text:"Spacious area with tatami and impact bags for kickboxing and K1. Striking technique, combinations and controlled sparring.",
+    fac4_name:"Cardio Zone", fac4_text:"Treadmills, stationary bikes, ellipticals and rowing machines. Ideal for warm-ups, fat burn and endurance.",
+    fac5_name:"Changing Rooms", fac5_text:"Separate changing rooms with showers, lockers and restrooms. Always clean and well maintained.",
+    nut_tag:"Fuel your performance", nut_title:"Sports Nutrition",
+    nut_headline:"Everything you need<br><span>under one roof</span><br>at the best prices",
+    nut_p1:"At Fercor Sports Club you will find a selection of sports nutrition products available for purchase directly at the club.",
+    nut_p2:"Our trainers can also advise you on which products best suit your goals and workout routine.",
+    n1_name:"Proteins", n1_desc:"Whey, vegan protein and casein for muscle recovery",
+    n2_name:"Pre-workout", n2_desc:"Energy and endurance formulas to maximise your performance",
+    n3_name:"Bars & Snacks", n3_desc:"Protein and energy snacks for before and after the gym",
+    n4_name:"Vitamins & BCAA", n4_desc:"Supplements to support health and muscle recovery",
+    rev_tag:"What our members say", rev_title:"Real Reviews", g_count:"See 77 reviews on Google",
+    rev1_text:"A great option for getting in shape in a gym with a good vibe. I recommend it for the quality-price ratio. Very attentive and motivating professionals.",
+    rev2_text:"The gym is very well equipped to work all muscle groups. Great atmosphere and very professional staff.",
+    rev3_text:"Complete facilities, friendly atmosphere and reasonable prices. The trainers are very attentive and always available to answer questions.",
+    rev3_author:"Fercor Sports Club Member",
+    loc_tag:"Where we are", loc_title:"Location",
+    c_address:"Address", c_phone:"Phone", c_hours:"Hours",
+    c_hours_val:"Monday – Friday: 8:00 – 22:00<br>Saturday: 10:00 – 14:00<br>Sunday: Closed",
+    c_transport:"Getting here", c_transport_val:"Florida neighbourhood, Alicante<br>Accessible by public transport",
+    c_offer:"Welcome offer", c_offer_val:"First class 100% free",
+    cta_h2:"START TODAY", cta_p:"Your best self is waiting for you at Fercor Sports Club",
+    cta_free:"🎁 First class completely free — no commitment", cta_btn:"Call now · +34 865 817 354", cta_wa:"WhatsApp",
+    c_wa:"WhatsApp", c_wa_val:"Message now",
+    map_pin:"Carrer Grado, 8", map_click:"Click to open directions", map_btn:"Get directions",
+    wa_float_label:"Chat with us on WhatsApp",
+    wa_msg_default:"Hi! I'd like more information about Fercor Sports Club.",
+    wa_msg_hero:"Hi! I'd like to book my first free class at Fercor Sports Club.",
+    wa_msg_trial:"Hi! I saw the free first-class offer and I'd like to sign up.",
+    wa_msg_hours:"Hi! I have a question about hours and pricing.",
+    wa_msg_contact:"Hi! I'd like more information about the gym.",
+    wa_msg_cta:"Hi! I want to start at Fercor Sports Club and book my free class.",
+    wa_msg_float:"Hi! I'd like more information about Fercor Sports Club.",
+    footer_copy:"© 2025 Fercor Sports Club · Alicante · All rights reserved"
+  },
+
+  ru: {
+    nav_home:"Главная", nav_services:"Услуги", nav_trainers:"Тренеры", nav_hours:"Расписание", nav_facilities:"Залы", nav_nutrition:"Питание", nav_contact:"Контакты", nav_call:"Позвонить", nav_wa:"WhatsApp",
+    hero_h1:"ТРЕНИРУЙ.<br><em>ПОБЕЖДАЙ.</em><br>ДОСТИГАЙ.",
+    hero_p:"Fercor Sports Club — место, где ты преобразишь своё тело и превзойдёшь свои пределы. Полное оснащение, профессиональные тренеры и неповторимая атмосфера в районе Флорида, Аликанте.",
+    hero_btn1:"Услуги клуба", hero_btn2:"Как добраться", hero_btn_wa:"Записаться бесплатно",
+    stat_rating:"Рейтинг Google", stat_reviews:"Отзывы", stat_days_num:"6 дней", stat_days_label:"Открыто в неделю",
+    trial_text:"🎁 <span>Первое занятие бесплатно!</span> — Приходи без обязательств",
+    trial_sub:"Любой вид тренировки · Просто позвони или зайди в клуб", trial_btn:"Записаться бесплатно", trial_btn_wa:"Написать в WhatsApp",
+    services_tag:"Что мы предлагаем", services_title:"Услуги клуба", services_sub:"Полное оснащение для любого уровня — от новичков до опытных спортсменов. Отличная атмосфера, отличное соотношение цены и качества.",
+    s1_name:"Тренажёрный зал", s1_desc:"Полное оборудование для силовых тренировок. Современные тренажёры и свободные веса для проработки всех групп мышц.",
+    s2_name:"MMA & K1", s2_desc:"Профессиональный ринг, татами и ударные мешки. Тренируй смешанные единоборства и кикбоксинг для формы, техники и уверенности.",
+    s3_name:"Кардио", s3_desc:"Большая кардиозона с беговыми дорожками, велотренажёрами, эллипсами и гребными тренажёрами для развития выносливости.",
+    s4_name:"Групповые занятия", s4_desc:"Коллективные занятия фитнесом, йогой, пилатесом и другими направлениями с квалифицированными тренерами.",
+    s5_name:"Персональные тренировки", s5_desc:"Индивидуальные занятия с сертифицированными тренерами. Персональная программа для быстрого достижения целей.",
+    s6_name:"Раздевалки", s6_desc:"Чистые и ухоженные раздевалки и душевые для вашего комфорта до и после тренировки.",
+    tr_tag:"Профессионалы рядом", tr_title:"Опытные тренеры", tr_sub:"Наша команда высококвалифицированных специалистов готова сопровождать тебя на каждом шагу пути к здоровью и результату.",
+    tf1_title:"Дипломированные тренеры", tf1_desc:"Каждый член нашей команды имеет официальное образование в сфере спорта или сертификацию национального уровня.",
+    tf2_title:"Персональная программа", tf2_desc:"Каждый клиент получает план, адаптированный под его цели, уровень физической подготовки и доступное время.",
+    tf3_title:"Отслеживание прогресса", tf3_desc:"Регулярные замеры и корректировка программы для стабильного прогресса и постоянной мотивации.",
+    tf4_title:"Консультация по питанию", tf4_desc:"Рекомендации по спортивному питанию для усиления результатов тренировок.",
+    tq_text:"Зал очень хорошо оснащён для проработки всех групп мышц. Отличная атмосфера и команда профессионалов, которые действительно заботятся о твоих результатах. Отличный выбор по доступной цене.",
+    tq_cite:"— Реальные отзывы наших членов",
+    h_tag:"Когда нас посетить", h_title:"Расписание работы",
+    day_mon:"Понедельник", day_tue:"Вторник", day_wed:"Среда", day_thu:"Четверг", day_fri:"Пятница", day_sat:"Суббота", day_sun:"Воскресенье",
+    badge_open:"Открыто", closed:"Закрыто",
+    live_checking:"Проверяем расписание…",
+    live_open_until:"Открыто · Закрытие в {time}",
+    live_closed_today:"Закрыто · Откроется завтра в {time}",
+    live_closed_sunday:"По воскресеньям закрыто · Откроется в понедельник в 8:00",
+    live_closes_soon:"Скоро закрытие! · До {time}",
+    hi_title:"Остались вопросы?",
+    hi_p1:"Позвоните нам или загляните в клуб. Наша команда с радостью расскажет о тарифах, членстве, занятиях и доступных активностях.",
+    hi_p2:"Мы находимся на улице Кале Градо в районе Флорида, Аликанте. Удобный доступ на общественном транспорте.",
+    hi_p3:"Напоминаем: первое занятие полностью бесплатно. Приходи без обязательств и открой для себя свой новый зал.", hi_wa_btn:"Написать нам в WhatsApp",
+    fac_tag:"Наше пространство", fac_title:"Залы и зоны", fac_sub:"Полноценный спортивный комплекс с отдельными зонами для каждой дисциплины и каждой цели.",
+    fac1_name:"Тренажёрный зал", fac1_text:"Современное оборудование: свободные веса и тренажёры для силовых тренировок, тонуса и гипертрофии.",
+    fac2_name:"Зал MMA", fac2_text:"Профессиональный ринг с татами, тяжёлые мешки, перчатки и защита. Тренировки по смешанным единоборствам для новичков и продвинутых.",
+    fac3_name:"Зал K1", fac3_text:"Просторная зона с татами и ударными мешками для кикбоксинга и K1. Техника ударов, комбинации и контролируемый спарринг.",
+    fac4_name:"Кардиозона", fac4_text:"Беговые дорожки, велотренажёры, эллипсы и гребные тренажёры. Подходят для разминки, жиросжигания и выносливости.",
+    fac5_name:"Раздевалки", fac5_text:"Отдельные раздевалки с душевыми, шкафчиками и санузлами. Всегда чистые и ухоженные.",
+    nut_tag:"Топливо для результата", nut_title:"Спортивное питание",
+    nut_headline:"Всё необходимое<br><span>под одной крышей</span><br>по лучшим ценам",
+    nut_p1:"В Fercor Sports Club вы найдёте широкий выбор продуктов спортивного питания в продаже прямо в клубе.",
+    nut_p2:"Наши тренеры также могут проконсультировать вас о том, какие продукты лучше всего подойдут для ваших целей.",
+    n1_name:"Протеины", n1_desc:"Сывороточный, растительный протеин и казеин для восстановления мышц",
+    n2_name:"Предтренировочные", n2_desc:"Формулы энергии и выносливости для максимального результата",
+    n3_name:"Батончики и снеки", n3_desc:"Протеиновые и энергетические снеки до и после тренировки",
+    n4_name:"Витамины и BCAA", n4_desc:"Добавки для поддержания здоровья и восстановления мышц",
+    rev_tag:"Что говорят наши члены", rev_title:"Реальные отзывы", g_count:"Смотреть 77 отзывов в Google",
+    rev1_text:"Отличный вариант для тех, кто хочет прийти в форму в зале с хорошей атмосферой. Рекомендую за соотношение цены и качества. Очень внимательные и мотивирующие специалисты.",
+    rev2_text:"Зал отлично оснащён для проработки всех групп мышц. Хорошая атмосфера и очень профессиональный персонал.",
+    rev3_text:"Полное оснащение, дружелюбная атмосфера и разумные цены. Тренеры очень внимательны и всегда готовы ответить на вопросы.",
+    rev3_author:"Член Fercor Sports Club",
+    loc_tag:"Где мы находимся", loc_title:"Расположение",
+    c_address:"Адрес", c_phone:"Телефон", c_hours:"Часы работы",
+    c_hours_val:"Пн – Пт: 8:00 – 22:00<br>Суббота: 10:00 – 14:00<br>Воскресенье: закрыто",
+    c_transport:"Как добраться", c_transport_val:"Район Флорида, Аликанте<br>Доступно на общественном транспорте",
+    c_offer:"Приветственное предложение", c_offer_val:"Первое занятие на 100% бесплатно",
+    cta_h2:"НАЧНИ СЕГОДНЯ", cta_p:"Твоя лучшая версия ждёт тебя в Fercor Sports Club",
+    cta_free:"🎁 Первое занятие полностью бесплатно — без обязательств", cta_btn:"Позвонить · +34 865 817 354", cta_wa:"WhatsApp",
+    c_wa:"WhatsApp", c_wa_val:"Написать сейчас",
+    map_pin:"Carrer Grado, 8", map_click:"Нажми, чтобы открыть маршрут", map_btn:"Построить маршрут",
+    wa_float_label:"Напиши нам в WhatsApp",
+    wa_msg_default:"Здравствуйте! Хочу узнать больше о Fercor Sports Club.",
+    wa_msg_hero:"Здравствуйте! Хочу записаться на бесплатное первое занятие в Fercor Sports Club.",
+    wa_msg_trial:"Здравствуйте! Увидел(а) акцию — бесплатное первое занятие, хочу записаться.",
+    wa_msg_hours:"Здравствуйте! Есть вопрос по расписанию и тарифам.",
+    wa_msg_contact:"Здравствуйте! Хочу узнать больше о зале.",
+    wa_msg_cta:"Здравствуйте! Хочу начать тренироваться в Fercor Sports Club и записаться на бесплатное занятие.",
+    wa_msg_float:"Здравствуйте! Хочу узнать больше о Fercor Sports Club.",
+    footer_copy:"© 2025 Fercor Sports Club · Аликанте · Все права защищены"
+  }
+};
+
+const WA_PHONE = '34647239985';
+
+// Schedule: [openHour, closeHour] per day (0=Sun, 1=Mon ... 6=Sat)
+const SCHEDULE = {
+  0: null,          // Sunday closed
+  1: [8, 22],       // Mon
+  2: [8, 22],       // Tue
+  3: [8, 22],       // Wed
+  4: [8, 22],       // Thu
+  5: [8, 22],       // Fri
+  6: [10, 14]       // Sat
+};
+
+function formatTime(h) {
+  return h < 10 ? '0' + h + ':00' : h + ':00';
+}
+
+function nextOpenDay(day) {
+  // return next day-index with schedule (skipping null days)
+  for (let i = 1; i <= 7; i++) {
+    const d = (day + i) % 7;
+    if (SCHEDULE[d]) return { day: d, openHour: SCHEDULE[d][0] };
+  }
+  return null;
+}
+
+function updateLiveStatus(lang) {
+  const statusEl = document.getElementById('live-status');
+  if (!statusEl) return;
+  const t = i18n[lang] || i18n.es;
+  const textEl = statusEl.querySelector('.live-text');
+
+  // Use Europe/Madrid time regardless of visitor's timezone
+  const now = new Date();
+  const madridStr = now.toLocaleString('en-US', { timeZone: 'Europe/Madrid', hour12: false });
+  const madrid = new Date(madridStr);
+  const day = madrid.getDay();
+  const hour = madrid.getHours();
+  const minutes = madrid.getMinutes();
+  const timeNow = hour + minutes / 60;
+
+  const today = SCHEDULE[day];
+  let msg = '';
+  let isClosed = false;
+
+  if (today && timeNow >= today[0] && timeNow < today[1]) {
+    // Currently open
+    const minutesLeft = (today[1] - timeNow) * 60;
+    if (minutesLeft <= 60) {
+      msg = (t.live_closes_soon || 'Closing soon · Until {time}').replace('{time}', formatTime(today[1]));
+    } else {
+      msg = (t.live_open_until || 'Open · Closes at {time}').replace('{time}', formatTime(today[1]));
+    }
+  } else {
+    isClosed = true;
+    const nxt = nextOpenDay(day);
+    if (day === 0) {
+      msg = t.live_closed_sunday || 'Closed Sundays · Opens Monday at 8:00';
+    } else if (nxt) {
+      msg = (t.live_closed_today || 'Closed · Opens tomorrow at {time}').replace('{time}', formatTime(nxt.openHour));
+    }
+  }
+
+  textEl.textContent = msg;
+  statusEl.classList.toggle('closed-now', isClosed);
+
+  // Highlight today's row
+  document.querySelectorAll('.schedule-table tr').forEach(tr => {
+    tr.classList.toggle('today', Number(tr.getAttribute('data-day')) === day);
+  });
+}
+
+function updateWhatsAppLinks(lang) {
+  const t = i18n[lang] || i18n.es;
+  document.querySelectorAll('[data-wa-msg]').forEach(el => {
+    const key = el.getAttribute('data-wa-msg');
+    const msg = t[key] || t.wa_msg_default || '';
+    el.setAttribute('href', `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(msg)}`);
+  });
+}
+
+function setLang(lang) {
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent.trim().toLowerCase() === lang));
+  const t = i18n[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => { const k = el.getAttribute('data-i18n'); if (t[k] !== undefined) el.textContent = t[k]; });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => { const k = el.getAttribute('data-i18n-html'); if (t[k] !== undefined) el.innerHTML = t[k]; });
+  document.documentElement.lang = lang;
+  updateWhatsAppLinks(lang);
+  updateLiveStatus(lang);
+}
+
+// Initialize on load (default lang: es)
+updateWhatsAppLinks('es');
+updateLiveStatus('es');
+// Refresh status every minute so "Closing soon" appears as time approaches
+setInterval(() => {
+  const activeBtn = document.querySelector('.lang-btn.active');
+  const lang = activeBtn ? activeBtn.textContent.trim().toLowerCase() : 'es';
+  updateLiveStatus(lang);
+}, 60000);
+</script>
+</body>
+</html>
