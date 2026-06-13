@@ -30,12 +30,12 @@
 <meta name="twitter:image" content="https://kgarnikg.github.io/Betis-Florida/og-image.jpg">
 
 <!-- Theme color for mobile browsers -->
-<meta name="theme-color" content="#0d0d0d">
+<meta name="theme-color" content="#ffffff">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --black: #0d0d0d; --white: #f5f2ec; --red: #0066FF;
+    --black: #ffffff; --white: #1a1a2e; --red: #0066FF;
     --red-dark: #0044CC; --gold: #d4a828;
   }
   html { scroll-behavior: smooth; overflow-x: hidden; }
@@ -44,103 +44,103 @@
   /* LANG SWITCHER */
   .lang-switcher { display: flex; gap: 0.4rem; align-items: center; }
   .lang-btn {
-    background: transparent; border: 1px solid rgba(245,242,236,0.2);
-    color: rgba(245,242,236,0.5); font-size: 0.72rem; letter-spacing: 0.1em;
+    background: transparent; border: 1px solid rgba(0,102,255,0.25);
+    color: rgba(26,26,46,0.5); font-size: 0.72rem; letter-spacing: 0.1em;
     text-transform: uppercase; padding: 0.3rem 0.65rem; border-radius: 2px;
     cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.2s;
   }
   .lang-btn:hover { border-color: var(--red); color: var(--red); }
-  .lang-btn.active { background: var(--red); border-color: var(--red); color: var(--white); }
+  .lang-btn.active { background: var(--red); border-color: var(--red); color: #fff; }
 
   /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 1.2rem 4rem; background: rgba(13,13,13,0.9);
-    backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,102,255,0.2); gap: 1rem;
+    padding: 1.2rem 4rem; background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,102,255,0.15); box-shadow: 0 2px 20px rgba(0,102,255,0.06); gap: 1rem;
   }
-  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 0.1em; color: var(--white); text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 0.1em; color: #1a1a2e; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
   .nav-logo span { color: var(--red); }
   .nav-links { display: flex; gap: 1.6rem; list-style: none; }
-  .nav-links a { color: rgba(245,242,236,0.7); text-decoration: none; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a { color: rgba(26,26,46,0.6); text-decoration: none; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
   .nav-links a:hover { color: var(--red); }
   .nav-right { display: flex; align-items: center; gap: 1rem; }
-  .nav-cta { background: var(--red); color: var(--white); padding: 0.55rem 1.4rem; border-radius: 2px; text-decoration: none; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: background 0.2s; white-space: nowrap; }
+  .nav-cta { background: var(--red); color: #fff; padding: 0.55rem 1.4rem; border-radius: 2px; text-decoration: none; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: background 0.2s; white-space: nowrap; }
   .nav-cta:hover { background: var(--red-dark); }
 
   /* HERO */
   .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding: 0 4rem; }
-  .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(13,13,13,0.96) 40%, rgba(0,102,255,0.08) 100%); z-index: 1; }
-  .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(0,102,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,102,255,0.06) 1px, transparent 1px); background-size: 60px 60px; z-index: 0; }
-  .hero-accent { position: absolute; right: -100px; top: 50%; transform: translateY(-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(0,102,255,0.12) 0%, transparent 70%); z-index: 0; }
+  .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,20,60,0.97) 30%, rgba(0,102,255,0.85) 100%); z-index: 1; }
+  .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 60px 60px; z-index: 0; }
+  .hero-accent { position: absolute; right: -100px; top: 50%; transform: translateY(-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(0,102,255,0.25) 0%, transparent 70%); z-index: 0; }
   .hero-content { position: relative; z-index: 2; max-width: 720px; padding-top: 80px; }
-  .hero-tag { display: inline-block; background: rgba(0,102,255,0.15); border: 1px solid rgba(0,102,255,0.4); color: var(--red); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 2px; margin-bottom: 1.5rem; }
-  .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(4rem, 9vw, 8rem); line-height: 0.92; letter-spacing: 0.02em; margin-bottom: 1.5rem; }
-  .hero h1 em { font-style: normal; color: var(--red); }
-  .hero p { font-size: 1.1rem; color: rgba(245,242,236,0.65); line-height: 1.7; max-width: 500px; margin-bottom: 2.5rem; font-weight: 300; }
+  .hero-tag { display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); color: #fff; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 2px; margin-bottom: 1.5rem; }
+  .hero h1 { font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: clamp(4rem, 9vw, 8rem); line-height: 0.92; letter-spacing: 0.02em; margin-bottom: 1.5rem; }
+  .hero h1 em { font-style: normal; color: #66b3ff; }
+  .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.75); line-height: 1.7; max-width: 500px; margin-bottom: 2.5rem; font-weight: 300; }
   .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-  .btn-primary { background: var(--red); color: var(--white); padding: 0.9rem 2rem; border-radius: 2px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; transition: background 0.2s, transform 0.15s; }
-  .btn-primary:hover { background: var(--red-dark); transform: translateY(-2px); }
-  .btn-outline { border: 1px solid rgba(245,242,236,0.3); color: var(--white); padding: 0.9rem 2rem; border-radius: 2px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; transition: border-color 0.2s, transform 0.15s; }
-  .btn-outline:hover { border-color: var(--red); color: var(--red); transform: translateY(-2px); }
-  .hero-stats { display: flex; gap: 3rem; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(245,242,236,0.1); }
-  .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: var(--red); line-height: 1; }
-  .stat-label { font-size: 0.75rem; color: rgba(245,242,236,0.5); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.3rem; }
+  .btn-primary { background: #fff; color: #0066FF; padding: 0.9rem 2rem; border-radius: 2px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; transition: background 0.2s, transform 0.15s; }
+  .btn-primary:hover { background: #e8f0ff; transform: translateY(-2px); }
+  .btn-outline { border: 1px solid rgba(255,255,255,0.5); color: #fff; padding: 0.9rem 2rem; border-radius: 2px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; transition: border-color 0.2s, transform 0.15s; }
+  .btn-outline:hover { border-color: #fff; color: #fff; transform: translateY(-2px); }
+  .hero-stats { display: flex; gap: 3rem; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
+  .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: #66b3ff; line-height: 1; }
+  .stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.6); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.3rem; }
 
   /* TRIAL BANNER */
-  .trial-banner { background: linear-gradient(90deg, rgba(0,102,255,0.15), rgba(0,102,255,0.05)); border-top: 1px solid rgba(0,102,255,0.3); border-bottom: 1px solid rgba(0,102,255,0.3); padding: 1.2rem 4rem; display: flex; align-items: center; justify-content: center; gap: 1.5rem; text-align: center; flex-wrap: wrap; }
+  .trial-banner { background: linear-gradient(90deg, #0055dd, #0077ff); border-top: none; border-bottom: none; padding: 1.2rem 4rem; display: flex; align-items: center; justify-content: center; gap: 1.5rem; text-align: center; flex-wrap: wrap; }
   .trial-banner .trial-icon { font-size: 1.5rem; }
-  .trial-banner .trial-text { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.1em; color: var(--white); }
-  .trial-banner .trial-text span { color: var(--red); }
-  .trial-banner .trial-sub { font-size: 0.85rem; color: rgba(245,242,236,0.55); font-weight: 300; }
-  .trial-btn { background: var(--red); color: var(--white); padding: 0.6rem 1.5rem; border-radius: 2px; text-decoration: none; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: background 0.2s; white-space: nowrap; }
+  .trial-banner .trial-text { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.1em; color: #fff; }
+  .trial-banner .trial-text span { color: #99ccff; }
+  .trial-banner .trial-sub { font-size: 0.85rem; color: rgba(255,255,255,0.7); font-weight: 300; }
+  .trial-btn { background: #fff; color: #0066FF; padding: 0.6rem 1.5rem; border-radius: 2px; text-decoration: none; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: background 0.2s; white-space: nowrap; }
   .trial-btn:hover { background: var(--red-dark); }
 
   /* SECTIONS */
   section { padding: 6rem 4rem; }
   .section-tag { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
-  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; margin-bottom: 1rem; }
-  .section-sub { color: rgba(245,242,236,0.55); font-size: 1rem; line-height: 1.7; max-width: 520px; font-weight: 300; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; margin-bottom: 1rem; color: #1a1a2e; }
+  .section-sub { color: rgba(26,26,46,0.55); font-size: 1rem; line-height: 1.7; max-width: 520px; font-weight: 300; }
   .divider { width: 48px; height: 3px; background: var(--red); margin: 1.2rem 0 1.5rem; }
 
   /* SERVICIOS */
-  #servicios { background: #111111; }
+  #servicios { background: #f7f9ff; }
   .services-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.5rem; flex-wrap: wrap; gap: 1.5rem; }
-  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5px; background: rgba(0,102,255,0.15); border: 1px solid rgba(0,102,255,0.15); }
-  .service-card { background: #111111; padding: 2.5rem 2rem; transition: background 0.25s; position: relative; overflow: hidden; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5px; background: rgba(0,102,255,0.08); border: 1px solid rgba(0,102,255,0.15); }
+  .service-card { background: #fff; padding: 2.5rem 2rem; transition: background 0.25s; position: relative; overflow: hidden; }
   .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
-  .service-card:hover { background: #161616; }
+  .service-card:hover { background: #f0f4ff; }
   .service-card:hover::before { transform: scaleX(1); }
   .service-icon { font-size: 2rem; margin-bottom: 1.2rem; display: block; }
   .service-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
-  .service-desc { font-size: 0.88rem; color: rgba(245,242,236,0.5); line-height: 1.6; font-weight: 300; }
+  .service-desc { font-size: 0.88rem; color: rgba(26,26,46,0.5); line-height: 1.6; font-weight: 300; }
 
   /* TRAINERS */
-  #entrenadores { background: #0a0a0a; }
+  #entrenadores { background: #fff; }
   .trainers-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem; }
   .trainer-features { display: flex; flex-direction: column; gap: 1.5rem; }
-  .trainer-feature { display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; background: #111111; border-left: 3px solid var(--red); transition: background 0.2s; }
-  .trainer-feature:hover { background: #161616; }
+  .trainer-feature { display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; background: #f7f9ff; border-left: 3px solid var(--red); transition: background 0.2s; }
+  .trainer-feature:hover { background: #e8f0ff; }
   .trainer-feature-icon { font-size: 1.5rem; flex-shrink: 0; }
   .trainer-feature-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 0.05em; margin-bottom: 0.35rem; }
-  .trainer-feature-desc { font-size: 0.85rem; color: rgba(245,242,236,0.5); line-height: 1.6; font-weight: 300; }
-  .trainer-quote { background: linear-gradient(135deg, #0a0a1a, #080811); border: 1px solid rgba(0,102,255,0.2); padding: 3rem; position: relative; }
+  .trainer-feature-desc { font-size: 0.85rem; color: rgba(26,26,46,0.5); line-height: 1.6; font-weight: 300; }
+  .trainer-quote { background: linear-gradient(135deg, #e8f0ff, #f0f4ff); border: 1px solid rgba(0,102,255,0.2); padding: 3rem; position: relative; }
   .trainer-quote::before { content: '"'; font-family: 'Bebas Neue', sans-serif; font-size: 8rem; color: rgba(0,102,255,0.12); position: absolute; top: -1rem; left: 2rem; line-height: 1; }
-  .trainer-quote p { font-size: 1.05rem; line-height: 1.8; color: rgba(245,242,236,0.75); font-weight: 300; position: relative; z-index: 1; }
+  .trainer-quote p { font-size: 1.05rem; line-height: 1.8; color: rgba(26,26,46,0.75); font-weight: 300; position: relative; z-index: 1; }
   .trainer-quote cite { display: block; margin-top: 1.5rem; font-size: 0.8rem; color: var(--red); letter-spacing: 0.1em; text-transform: uppercase; font-style: normal; }
 
   /* HORARIOS */
-  #horarios { background: var(--black); }
+  #horarios { background: #f0f4ff; }
   .horarios-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
   .schedule-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
-  .schedule-table tr { border-bottom: 1px solid rgba(245,242,236,0.08); }
+  .schedule-table tr { border-bottom: 1px solid rgba(0,102,255,0.1); }
   .schedule-table tr:last-child { border-bottom: none; }
   .schedule-table td { padding: 1rem 0; font-size: 0.95rem; }
-  .schedule-table td:first-child { color: rgba(245,242,236,0.55); font-weight: 300; }
+  .schedule-table td:first-child { color: rgba(26,26,46,0.55); font-weight: 300; }
   .schedule-table td:last-child { text-align: right; font-weight: 500; }
-  .schedule-table tr.closed td { color: rgba(245,242,236,0.3); }
+  .schedule-table tr.closed td { color: rgba(26,26,46,0.3); }
   .schedule-table tr.closed td:last-child { color: rgba(0,102,255,0.6); font-weight: 400; }
-  .schedule-table tr.today td { color: var(--white); font-weight: 500; background: rgba(0,102,255,0.06); }
+  .schedule-table tr.today td { color: #1a1a2e; font-weight: 500; background: rgba(0,102,255,0.06); }
   .schedule-table tr.today td:first-child { position: relative; padding-left: 1rem; }
   .schedule-table tr.today td:first-child::before {
     content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
@@ -170,19 +170,19 @@
   }
   .live-status.closed-now .live-dot { animation: none; }
   .badge-open { display: inline-block; background: rgba(0,180,100,0.12); border: 1px solid rgba(0,180,100,0.3); color: #4ade80; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.7rem; border-radius: 2px; margin-left: 0.8rem; vertical-align: middle; }
-  .horarios-info { padding: 2.5rem; background: #111111; border-left: 3px solid var(--red); }
+  .horarios-info { padding: 2.5rem; background: #fff; border-radius: 4px; box-shadow: 0 4px 20px rgba(0,102,255,0.08); border-left: 3px solid var(--red); }
   .horarios-info h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; margin-bottom: 1rem; }
-  .horarios-info p { color: rgba(245,242,236,0.6); font-size: 0.9rem; line-height: 1.7; font-weight: 300; }
+  .horarios-info p { color: rgba(26,26,46,0.6); font-size: 0.9rem; line-height: 1.7; font-weight: 300; }
   .horarios-info .tel { display: block; margin-top: 1.5rem; font-size: 1.4rem; font-family: 'Bebas Neue', sans-serif; color: var(--red); letter-spacing: 0.05em; text-decoration: none; }
   .horarios-info .tel:hover { color: var(--gold); }
 
   /* INSTALACIONES */
-  #instalaciones { background: #0a0a0a; }
+  #instalaciones { background: #fff; }
   .facilities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
-  .facility-item { min-height: 280px; background: #1a1a1a; border: 1px solid rgba(245,242,236,0.07); border-radius: 2px; display: flex; flex-direction: column; overflow: hidden; transition: border-color 0.25s, transform 0.2s; }
+  .facility-item { min-height: 280px; background: #fff; border: 1px solid rgba(0,102,255,0.1); border-radius: 6px; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 4px 16px rgba(0,102,255,0.06); transition: border-color 0.25s, transform 0.2s; }
   .facility-item:hover { border-color: rgba(0,102,255,0.4); transform: translateY(-4px); }
-  .facility-photo { width: 100%; height: 200px; object-fit: cover; display: block; filter: brightness(0.85) contrast(1.05); transition: filter 0.3s; }
-  .facility-item:hover .facility-photo { filter: brightness(1) contrast(1.08); }
+  .facility-photo { width: 100%; height: 200px; object-fit: cover; display: block; filter: brightness(0.95) contrast(1.02); transition: filter 0.3s; }
+  .facility-item:hover .facility-photo { filter: brightness(1) contrast(1.05); }
   .facility-body { padding: 1.3rem 1.5rem; flex: 1; display: flex; flex-direction: column; gap: 0.5rem; }
   .facility-emoji { font-size: 2.5rem; }
   .facility-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.25rem; letter-spacing: 0.08em; }
@@ -190,71 +190,75 @@
   .facility-item:first-child .facility-photo { width: 50%; height: auto; min-height: 320px; }
   .facility-item:first-child .facility-body { padding: 2rem 2.5rem; justify-content: center; }
   .facility-item:first-child .facility-name { font-size: 1.8rem; }
-  .facility-text { font-size: 0.85rem; color: rgba(245,242,236,0.5); font-weight: 300; line-height: 1.55; margin-top: 0.2rem; }
+  .facility-text { font-size: 0.85rem; color: rgba(26,26,46,0.5); font-weight: 300; line-height: 1.55; margin-top: 0.2rem; }
   /* Photo gallery strip above facilities */
   .gym-gallery { display: flex; gap: 0.4rem; margin-top: 3rem; margin-bottom: 0.5rem; overflow: hidden; border-radius: 2px; }
-  .gym-gallery img { flex: 1; min-width: 0; height: 220px; object-fit: cover; filter: brightness(0.8) contrast(1.05); transition: filter 0.3s, flex 0.4s; cursor: pointer; }
-  .gym-gallery img:hover { filter: brightness(1) contrast(1.1); flex: 1.6; }
+  .gym-gallery img { flex: 1; min-width: 0; height: 220px; object-fit: cover; filter: brightness(0.92) contrast(1.02); transition: filter 0.3s, flex 0.4s; cursor: pointer; }
+  .gym-gallery img:hover { filter: brightness(1) contrast(1.05); flex: 1.6; }
 
   /* NUTRICION */
-  #nutricion { background: #111111; }
+  #nutricion { background: #f7f9ff; }
   .nutrition-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem; }
   .nutrition-photo { width: 100%; border-radius: 2px; border: 1px solid rgba(0,102,255,0.15); margin-bottom: 1.5rem; }
   .nutrition-products { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .nutrition-item { background: #1a1a1a; border: 1px solid rgba(245,242,236,0.07); padding: 1.5rem 1.2rem; border-radius: 2px; transition: border-color 0.25s, background 0.25s; text-align: center; }
-  .nutrition-item:hover { border-color: rgba(0,102,255,0.35); background: #1a1a1e; }
+  .nutrition-item { background: #fff; border: 1px solid rgba(0,102,255,0.1); padding: 1.5rem 1.2rem; box-shadow: 0 2px 10px rgba(0,102,255,0.04); border-radius: 2px; transition: border-color 0.25s, background 0.25s; text-align: center; }
+  .nutrition-item:hover { border-color: rgba(0,102,255,0.35); background: #f0f4ff; }
   .n-icon { font-size: 2rem; margin-bottom: 0.6rem; display: block; }
   .n-name { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
-  .n-desc { font-size: 0.8rem; color: rgba(245,242,236,0.45); line-height: 1.5; font-weight: 300; }
+  .n-desc { font-size: 0.8rem; color: rgba(26,26,46,0.45); line-height: 1.5; font-weight: 300; }
   .nt-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; margin-bottom: 1.5rem; line-height: 1.1; }
   .nt-title span { color: var(--red); }
-  .nutrition-text p { color: rgba(245,242,236,0.6); font-size: 0.95rem; line-height: 1.8; font-weight: 300; margin-bottom: 1rem; }
+  .nutrition-text p { color: rgba(26,26,46,0.6); font-size: 0.95rem; line-height: 1.8; font-weight: 300; margin-bottom: 1rem; }
 
   /* REVIEWS */
-  #resenas { background: var(--black); }
+  #resenas { background: #fff; }
   .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
-  .review-card { background: #111111; border: 1px solid rgba(245,242,236,0.07); padding: 2rem; border-radius: 2px; transition: border-color 0.25s; }
+  .review-card { background: #f7f9ff; border: 1px solid rgba(0,102,255,0.1); padding: 2rem; border-radius: 2px; transition: border-color 0.25s; }
   .review-card:hover { border-color: rgba(0,102,255,0.3); }
   .review-stars { color: var(--gold); margin-bottom: 1rem; }
-  .review-text { font-size: 0.9rem; color: rgba(245,242,236,0.65); line-height: 1.7; font-weight: 300; margin-bottom: 1.2rem; }
-  .review-author { font-size: 0.8rem; color: rgba(245,242,236,0.35); letter-spacing: 0.08em; text-transform: uppercase; }
+  .review-text { font-size: 0.9rem; color: rgba(26,26,46,0.65); line-height: 1.7; font-weight: 300; margin-bottom: 1.2rem; }
+  .review-author { font-size: 0.8rem; color: rgba(26,26,46,0.4); letter-spacing: 0.08em; text-transform: uppercase; }
   .reviews-cta { display: flex; justify-content: center; margin-top: 2.5rem; }
   .google-reviews-btn {
     display: inline-flex; align-items: center; gap: 0.9rem;
-    background: #111111; border: 1px solid rgba(245,242,236,0.1);
+    background: #fff; border: 1px solid rgba(0,102,255,0.15);
     padding: 0.9rem 1.6rem; border-radius: 2px;
     text-decoration: none; color: var(--white);
     font-size: 0.85rem; letter-spacing: 0.05em;
     transition: border-color 0.25s, background 0.25s, transform 0.15s;
   }
-  .google-reviews-btn:hover { border-color: rgba(0,102,255,0.4); background: #161616; transform: translateY(-2px); }
+  .google-reviews-btn:hover { border-color: rgba(0,102,255,0.4); background: #f0f4ff; transform: translateY(-2px); }
   .google-reviews-btn .g-logo { width: 1.3rem; height: 1.3rem; flex-shrink: 0; }
   .google-reviews-btn .g-rating { display: flex; flex-direction: column; line-height: 1.15; }
   .google-reviews-btn .g-stars { color: var(--gold); font-size: 0.9rem; letter-spacing: 0.05em; }
-  .google-reviews-btn .g-count { font-size: 0.75rem; color: rgba(245,242,236,0.5); margin-top: 0.15rem; }
+  .google-reviews-btn .g-count { font-size: 0.75rem; color: rgba(26,26,46,0.5); margin-top: 0.15rem; }
   .google-reviews-btn .g-arrow { margin-left: 0.3rem; opacity: 0.5; transition: opacity 0.2s, transform 0.2s; }
   .google-reviews-btn:hover .g-arrow { opacity: 1; transform: translateX(3px); }
 
   /* UBICACION */
-  #ubicacion { background: #111111; }
+  #ubicacion { background: #f0f4ff; }
   .ubicacion-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
   .map-frame { width: 100%; height: 380px; border: 1px solid rgba(0,102,255,0.2); border-radius: 2px; overflow: hidden; }
+  .map-and-video { display: flex; flex-direction: column; gap: 1.5rem; }
+  .video-block { width: 100%; border-radius: 4px; overflow: hidden; border: 1px solid rgba(0,102,255,0.15); background: #000; }
+  .video-block video { width: 100%; display: block; max-height: 260px; object-fit: cover; }
+  .video-caption { padding: 0.6rem 0.9rem; font-size: 0.78rem; color: rgba(26,26,46,0.55); background: #f7f8fc; text-align: center; letter-spacing: 0.03em; }
   .contact-info h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; margin-bottom: 2rem; }
-  .contact-row { display: flex; gap: 1rem; align-items: flex-start; padding: 1.2rem 0; border-bottom: 1px solid rgba(245,242,236,0.08); }
+  .contact-row { display: flex; gap: 1rem; align-items: flex-start; padding: 1.2rem 0; border-bottom: 1px solid rgba(0,102,255,0.1); }
   .contact-row:last-child { border-bottom: none; }
   .contact-icon { font-size: 1.2rem; margin-top: 0.1rem; flex-shrink: 0; }
-  .contact-label { font-size: 0.75rem; color: rgba(245,242,236,0.4); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.3rem; }
+  .contact-label { font-size: 0.75rem; color: rgba(26,26,46,0.4); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.3rem; }
   .contact-value { font-size: 0.95rem; color: var(--white); font-weight: 400; }
   .contact-value a { color: var(--red); text-decoration: none; }
   .contact-value a:hover { text-decoration: underline; }
 
   /* CTA */
-  .cta-banner { background: var(--red); padding: 5rem 4rem; text-align: center; position: relative; overflow: hidden; }
+  .cta-banner { background: linear-gradient(135deg, #0044CC, #0077FF); padding: 5rem 4rem; text-align: center; position: relative; overflow: hidden; }
   .cta-banner::before { content: 'FERCOR'; position: absolute; font-family: 'Bebas Neue', sans-serif; font-size: 18rem; color: rgba(255,255,255,0.04); top: 50%; left: 50%; transform: translate(-50%,-50%); white-space: nowrap; pointer-events: none; }
   .cta-banner h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 6vw, 5rem); color: var(--white); margin-bottom: 1rem; position: relative; }
   .cta-banner p { color: rgba(255,255,255,0.75); margin-bottom: 0.5rem; font-weight: 300; position: relative; }
   .cta-free { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: var(--white); font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 2px; margin-bottom: 2rem; position: relative; }
-  .btn-white { display: inline-block; background: var(--white); color: var(--red); padding: 0.9rem 2.5rem; border-radius: 2px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; position: relative; transition: transform 0.15s, background 0.2s; }
+  .btn-white { display: inline-block; background: #fff; color: #0066FF; padding: 0.9rem 2.5rem; border-radius: 2px; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; position: relative; transition: transform 0.15s, background 0.2s; }
   .btn-white:hover { background: #fffaf0; transform: translateY(-2px); }
 
   /* WHATSAPP — colors & shared */
@@ -271,10 +275,6 @@
   }
   .nav-wa:hover { background: var(--wa-dark); transform: translateY(-1px); }
   .nav-wa .wa-icon { width: 1rem; height: 1rem; }
-  .nav-social { display: flex; align-items: center; gap: 0.5rem; }
-  .nav-social a { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(245,242,236,0.2); color: rgba(245,242,236,0.6); text-decoration: none; transition: border-color 0.2s, color 0.2s, background 0.2s; }
-  .nav-social a:hover { border-color: var(--red); color: var(--white); background: rgba(0,102,255,0.15); }
-  .nav-social svg { width: 15px; height: 15px; fill: currentColor; }
 
   /* Hero WhatsApp button (prominent) */
   .btn-wa {
@@ -337,7 +337,7 @@
     position: relative; display: block; width: 100%; height: 380px;
     border: 1px solid rgba(0,102,255,0.2); border-radius: 2px; overflow: hidden;
     text-decoration: none; color: var(--white); cursor: pointer;
-    background: #0a0a0a;
+    background: #fff;
   }
   .map-link iframe { width: 100%; height: 100%; border: 0; display: block; pointer-events: none; filter: grayscale(0.25) contrast(1.05); }
   .map-overlay {
@@ -395,7 +395,7 @@
   }
   .wa-float-label {
     position: absolute; right: 70px; top: 50%; transform: translateY(-50%);
-    background: #0d0d0d; color: var(--white);
+    background: #1a1a2e; color: #fff;
     font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
     padding: 0.5rem 0.9rem; border-radius: 2px;
     border: 1px solid rgba(37,211,102,0.4);
@@ -405,60 +405,17 @@
   }
   .wa-float:hover .wa-float-label { opacity: 1; transform: translateY(-50%) translateX(-4px); }
 
-  /* SOCIAL SECTION — TikTok + Instagram */
-  .social-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; margin-top: 3rem; }
-  .tiktok-videos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-  .tiktok-embed-wrap { position: relative; width: 100%; padding-top: 177%; border-radius: 4px; overflow: hidden; background: #111; border: 1px solid rgba(245,242,236,0.07); }
-  .tiktok-embed-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-  .instagram-card {
-    background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);
-    border-radius: 4px; padding: 2.5rem 2rem;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 1.5rem; text-align: center; min-height: 350px;
-    transition: transform 0.2s; text-decoration: none; color: #fff;
-  }
-  .instagram-card:hover { transform: translateY(-4px); }
-  .ig-icon { width: 64px; height: 64px; border: 3px solid rgba(255,255,255,0.7); border-radius: 22%; padding: 12px; }
-  .ig-icon svg { width: 100%; height: 100%; fill: #fff; }
-  .ig-handle { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.06em; }
-  .ig-cta { font-size: 0.9rem; opacity: 0.9; line-height: 1.5; }
-  .ig-btn { display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 0.65rem 1.5rem; border-radius: 2px; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: background 0.2s; }
-  .ig-btn:hover { background: rgba(255,255,255,0.35); }
-  .tiktok-card {
-    background: #000; border: 1px solid rgba(245,242,236,0.07); border-radius: 4px;
-    padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;
-    text-decoration: none; color: var(--white); transition: transform 0.2s;
-  }
-  .tiktok-card:hover { transform: translateY(-4px); }
-  .tt-header { display: flex; align-items: center; gap: 0.8rem; }
-  .tt-logo svg { width: 28px; height: 28px; fill: #fff; }
-  .tt-info { display: flex; flex-direction: column; }
-  .tt-handle { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 0.05em; }
-  .tt-label { font-size: 0.75rem; color: rgba(245,242,236,0.5); }
-  .tt-btn { display: inline-block; background: #fe2c55; color: #fff; padding: 0.55rem 1.2rem; border-radius: 2px; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; text-align: center; transition: background 0.2s; }
-  .tt-btn:hover { background: #e0264c; }
-
-  @media (max-width: 900px) {
-    .social-grid { grid-template-columns: 1fr; }
-    .tiktok-videos { grid-template-columns: repeat(3, 1fr); }
-    .tiktok-embed-wrap { padding-top: 177%; }
-  }
-  @media (max-width: 600px) {
-    .tiktok-videos { grid-template-columns: 1fr 1fr; }
-    .tiktok-videos .tiktok-embed-wrap:last-child { display: none; }
-  }
-
   /* FOOTER */
-  footer { background: #080808; padding: 3rem 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,102,255,0.15); flex-wrap: wrap; gap: 1.5rem; }
-  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--white); letter-spacing: 0.1em; }
+  footer { background: #0d1b3e; padding: 3rem 4rem; display: flex; justify-content: space-between; align-items: center; border-top: none; flex-wrap: wrap; gap: 1.5rem; }
+  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: #fff; letter-spacing: 0.1em; }
   .footer-logo span { color: var(--red); }
-  .footer-copy { font-size: 0.8rem; color: rgba(245,242,236,0.3); }
+  .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
   .footer-links { display: flex; gap: 1.5rem; }
-  .footer-links a { color: rgba(245,242,236,0.4); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.05em; }
+  .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.05em; }
   .footer-links a:hover { color: var(--red); }
   .footer-social { display: flex; gap: 1rem; align-items: center; }
-  .footer-social a { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(245,242,236,0.15); color: rgba(245,242,236,0.5); text-decoration: none; transition: border-color 0.2s, color 0.2s, background 0.2s; }
-  .footer-social a:hover { border-color: var(--red); color: var(--white); background: rgba(0,102,255,0.12); }
+  .footer-social a { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.6); text-decoration: none; transition: border-color 0.2s, color 0.2s, background 0.2s; }
+  .footer-social a:hover { border-color: var(--red); color: var(--white); background: rgba(0,102,255,0.25); }
   .footer-social svg { width: 18px; height: 18px; fill: currentColor; }
 
   @media (max-width: 900px) {
@@ -472,7 +429,6 @@
     .nav-wa { padding: 0.45rem 0.7rem; font-size: 0.65rem; letter-spacing: 0.05em; gap: 0.35rem; }
     .nav-wa .wa-icon { width: 0.9rem; height: 0.9rem; }
     .nav-wa span { display: none; }
-    .nav-social { display: none; }
     section { padding: 4rem 1.25rem; }
     .hero { padding: 0 1.25rem; min-height: auto; padding-top: 6rem; padding-bottom: 3rem; }
     .hero-accent { width: 300px; height: 300px; right: -150px; }
@@ -553,10 +509,6 @@
       <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.11 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.74.46 3.44 1.32 4.94L2 22l5.3-1.39a9.88 9.88 0 0 0 4.73 1.2h.01c5.46 0 9.9-4.44 9.9-9.9a9.8 9.8 0 0 0-2.83-6.99ZM12.04 20.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.15.83.84-3.07-.2-.31a8.18 8.18 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.24 8.24Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.8-.23-.08-.4-.13-.56.13-.17.25-.65.8-.8.97-.15.17-.3.19-.55.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.3.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.55-1.34-.76-1.84-.2-.48-.4-.41-.55-.42l-.47-.01c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.76 2.68 4.26 3.76.6.26 1.06.41 1.42.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29Z"/></svg>
       <span data-i18n="nav_wa">WhatsApp</span>
     </a>
-    <div class="nav-social">
-      <a href="https://www.instagram.com/gymfercor.bf/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85 0 3.2-.01 3.58-.07 4.85-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85 0-3.2.01-3.58.07-4.85C2.38 3.86 3.9 2.31 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16ZM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.7.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.63-6.78-6.98-6.98C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84ZM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4Zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44Z"/></svg></a>
-      <a href="https://www.tiktok.com/@gym_fercor" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78 2.93 2.93 0 0 1 .88.13v-3.5a6.37 6.37 0 0 0-.88-.07A6.34 6.34 0 0 0 3.15 15.3a6.34 6.34 0 0 0 10.86 4.44 6.27 6.27 0 0 0 1.86-4.48V8.73a8.22 8.22 0 0 0 4.72 1.49V6.78a4.86 4.86 0 0 1-1-.09Z"/></svg></a>
-    </div>
   </div>
 </nav>
 
@@ -761,56 +713,30 @@
   </div>
 </section>
 
-<section id="social">
-  <p class="section-tag" data-i18n="soc_tag">Síguenos en redes</p>
-  <h2 class="section-title" data-i18n="soc_title">Nuestras Redes</h2>
-  <div class="divider"></div>
-  <div class="social-grid">
-    <div>
-      <div class="tiktok-card">
-        <div class="tt-header">
-          <span class="tt-logo"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78 2.93 2.93 0 0 1 .88.13v-3.5a6.37 6.37 0 0 0-.88-.07A6.34 6.34 0 0 0 3.15 15.3a6.34 6.34 0 0 0 10.86 4.44 6.27 6.27 0 0 0 1.86-4.48V8.73a8.22 8.22 0 0 0 4.72 1.49V6.78a4.86 4.86 0 0 1-1-.09Z"/></svg></span>
-          <div class="tt-info"><span class="tt-handle">@gym_fercor</span><span class="tt-label" data-i18n="soc_tt_label">Entrenamientos y vida del club</span></div>
-        </div>
-      </div>
-      <div class="tiktok-videos" style="margin-top:1rem;">
-        <div class="tiktok-embed-wrap">
-          <iframe src="https://www.tiktok.com/embed/v2/7626809838189710614" allowfullscreen allow="encrypted-media" loading="lazy"></iframe>
-        </div>
-        <div class="tiktok-embed-wrap">
-          <iframe src="https://www.tiktok.com/embed/v2/7619310335807261974" allowfullscreen allow="encrypted-media" loading="lazy"></iframe>
-        </div>
-        <div class="tiktok-embed-wrap">
-          <iframe src="https://www.tiktok.com/embed/v2/7629421697464093974" allowfullscreen allow="encrypted-media" loading="lazy"></iframe>
-        </div>
-      </div>
-      <a class="tt-btn" href="https://www.tiktok.com/@gym_fercor" target="_blank" rel="noopener" style="display:block; margin-top:1rem; text-align:center;" data-i18n="soc_tt_btn">Ver más en TikTok</a>
-    </div>
-    <a class="instagram-card" href="https://www.instagram.com/gymfercor.bf/" target="_blank" rel="noopener">
-      <div class="ig-icon"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85 0 3.2-.01 3.58-.07 4.85-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85 0-3.2.01-3.58.07-4.85C2.38 3.86 3.9 2.31 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16ZM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.7.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.63-6.78-6.98-6.98C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84ZM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4Zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44Z"/></svg></div>
-      <div class="ig-handle">@gymfercor.bf</div>
-      <div class="ig-cta" data-i18n="soc_ig_cta">Fotos, reels y la vida diaria del club. ¡Síguenos!</div>
-      <span class="ig-btn" data-i18n="soc_ig_btn">Seguir en Instagram</span>
-    </a>
-  </div>
-</section>
-
 <section id="ubicacion">
   <p class="section-tag" data-i18n="loc_tag">Dónde estamos</p>
   <h2 class="section-title" data-i18n="loc_title">Ubicación</h2>
   <div class="divider"></div>
   <div class="ubicacion-wrap">
-    <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=Fercor+Sports+Club+Carrer+Grado+8+Alicante&destination_place_id=" target="_blank" rel="noopener" aria-label="Ver ruta en Google Maps">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d793.1!2d-0.5106352!3d38.344266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDIwJzM5LjQiTiAwwrAzMCczOC4zIlc!5e0!3m2!1ses!2ses!4v1" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" tabindex="-1" aria-hidden="true"></iframe>
-      <span class="map-pin">📍 <span data-i18n="map_pin">Carrer Grado, 8</span></span>
-      <span class="map-overlay">
-        <span class="map-cta-label" data-i18n="map_click">Haz clic para abrir la ruta</span>
-        <span class="map-cta-btn">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.71 11.29 12.71 2.29a1 1 0 0 0-1.42 0l-9 9a1 1 0 0 0 0 1.42l9 9a1 1 0 0 0 1.42 0l9-9a1 1 0 0 0 0-1.42ZM14 14.5V12h-4v3H8v-4a1 1 0 0 1 1-1h5V7.5l3.5 3.5Z"/></svg>
-          <span data-i18n="map_btn">Cómo llegar</span>
+    <div class="map-and-video">
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=Fercor+Sports+Club+Carrer+Grado+8+Alicante&destination_place_id=" target="_blank" rel="noopener" aria-label="Ver ruta en Google Maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d793.1!2d-0.5106352!3d38.344266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDIwJzM5LjQiTiAwwrAzMCczOC4zIlc!5e0!3m2!1ses!2ses!4v1" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" tabindex="-1" aria-hidden="true"></iframe>
+        <span class="map-pin">📍 <span data-i18n="map_pin">Carrer Grado, 8</span></span>
+        <span class="map-overlay">
+          <span class="map-cta-label" data-i18n="map_click">Haz clic para abrir la ruta</span>
+          <span class="map-cta-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.71 11.29 12.71 2.29a1 1 0 0 0-1.42 0l-9 9a1 1 0 0 0 0 1.42l9 9a1 1 0 0 0 1.42 0l9-9a1 1 0 0 0 0-1.42ZM14 14.5V12h-4v3H8v-4a1 1 0 0 1 1-1h5V7.5l3.5 3.5Z"/></svg>
+            <span data-i18n="map_btn">Cómo llegar</span>
+          </span>
         </span>
-      </span>
-    </a>
+      </a>
+      <div class="video-block">
+        <video controls playsinline preload="metadata" poster="">
+          <source src="photos/tour-video.mp4" type="video/mp4">
+        </video>
+        <p class="video-caption" data-i18n="video_caption">📍 Así nos encontrarás — vídeo para llegar al gimnasio</p>
+      </div>
+    </div>
     <div class="contact-info">
       <h3>Fercor Sports Club</h3>
       <div class="contact-row"><span class="contact-icon">📍</span><div><div class="contact-label" data-i18n="c_address">Dirección</div><div class="contact-value">Carrer Grado, 8<br>03007 Alacant, Alicante</div></div></div>
@@ -975,7 +901,6 @@ const i18n = {
     n3_name:"Barritas & Snacks", n3_desc:"Snacks proteicos y energéticos para antes y después del gym",
     n4_name:"Vitaminas & BCAA", n4_desc:"Suplementos para apoyar la salud y la recuperación muscular",
     rev_tag:"Lo que dicen nuestros socios", rev_title:"Opiniones Reales", g_count:"Ver 77 reseñas en Google",
-    soc_tag:"Síguenos en redes", soc_title:"Nuestras Redes", soc_tt_label:"Entrenamientos y vida del club", soc_tt_btn:"Ver más en TikTok", soc_ig_cta:"Fotos, reels y la vida diaria del club. ¡Síguenos!", soc_ig_btn:"Seguir en Instagram",
     rev1_text:"Una buena opción para ponerte en forma en un gimnasio con buen ambiente. Lo recomiendo por la calidad-precio. Profesionales muy atentos y motivadores.",
     rev2_text:"El gimnasio está bastante bien equipado para trabajar en todos los grupos musculares. Buen ambiente y un personal muy profesional.",
     rev3_text:"Instalaciones completas, ambiente familiar y precios razonables. Los entrenadores son muy atentos y siempre están disponibles para resolver dudas.",
@@ -989,6 +914,7 @@ const i18n = {
     cta_free:"🎁 Primera clase completamente gratis — sin compromiso", cta_btn:"Llamar ahora · +34 865 817 354", cta_wa:"WhatsApp",
     c_wa:"WhatsApp", c_wa_val:"Escribir ahora",
     map_pin:"Carrer Grado, 8", map_click:"Haz clic para abrir la ruta", map_btn:"Cómo llegar",
+    video_caption:"📍 Así nos encontrarás — vídeo para llegar al gimnasio",
     wa_float_label:"Escríbenos en WhatsApp",
     wa_msg_default:"¡Hola! Me gustaría más información sobre Fercor Sports Club.",
     wa_msg_hero:"¡Hola! Quiero reservar mi primera clase gratis en Fercor Sports Club.",
@@ -1049,7 +975,6 @@ const i18n = {
     n3_name:"Bars & Snacks", n3_desc:"Protein and energy snacks for before and after the gym",
     n4_name:"Vitamins & BCAA", n4_desc:"Supplements to support health and muscle recovery",
     rev_tag:"What our members say", rev_title:"Real Reviews", g_count:"See 77 reviews on Google",
-    soc_tag:"Follow us", soc_title:"Our Socials", soc_tt_label:"Workouts and club life", soc_tt_btn:"See more on TikTok", soc_ig_cta:"Photos, reels and daily club life. Follow us!", soc_ig_btn:"Follow on Instagram",
     rev1_text:"A great option for getting in shape in a gym with a good vibe. I recommend it for the quality-price ratio. Very attentive and motivating professionals.",
     rev2_text:"The gym is very well equipped to work all muscle groups. Great atmosphere and very professional staff.",
     rev3_text:"Complete facilities, friendly atmosphere and reasonable prices. The trainers are very attentive and always available to answer questions.",
@@ -1063,6 +988,7 @@ const i18n = {
     cta_free:"🎁 First class completely free — no commitment", cta_btn:"Call now · +34 865 817 354", cta_wa:"WhatsApp",
     c_wa:"WhatsApp", c_wa_val:"Message now",
     map_pin:"Carrer Grado, 8", map_click:"Click to open directions", map_btn:"Get directions",
+    video_caption:"📍 See how to find us — video guide to the gym",
     wa_float_label:"Chat with us on WhatsApp",
     wa_msg_default:"Hi! I'd like more information about Fercor Sports Club.",
     wa_msg_hero:"Hi! I'd like to book my first free class at Fercor Sports Club.",
@@ -1123,7 +1049,6 @@ const i18n = {
     n3_name:"Батончики и снеки", n3_desc:"Протеиновые и энергетические снеки до и после тренировки",
     n4_name:"Витамины и BCAA", n4_desc:"Добавки для поддержания здоровья и восстановления мышц",
     rev_tag:"Что говорят наши члены", rev_title:"Реальные отзывы", g_count:"Смотреть 77 отзывов в Google",
-    soc_tag:"Подписывайся", soc_title:"Мы в соцсетях", soc_tt_label:"Тренировки и жизнь клуба", soc_tt_btn:"Смотреть ещё в TikTok", soc_ig_cta:"Фото, рилсы и ежедневная жизнь клуба. Подписывайся!", soc_ig_btn:"Подписаться в Instagram",
     rev1_text:"Отличный вариант для тех, кто хочет прийти в форму в зале с хорошей атмосферой. Рекомендую за соотношение цены и качества. Очень внимательные и мотивирующие специалисты.",
     rev2_text:"Зал отлично оснащён для проработки всех групп мышц. Хорошая атмосфера и очень профессиональный персонал.",
     rev3_text:"Полное оснащение, дружелюбная атмосфера и разумные цены. Тренеры очень внимательны и всегда готовы ответить на вопросы.",
@@ -1137,6 +1062,7 @@ const i18n = {
     cta_free:"🎁 Первое занятие полностью бесплатно — без обязательств", cta_btn:"Позвонить · +34 865 817 354", cta_wa:"WhatsApp",
     c_wa:"WhatsApp", c_wa_val:"Написать сейчас",
     map_pin:"Carrer Grado, 8", map_click:"Нажми, чтобы открыть маршрут", map_btn:"Построить маршрут",
+    video_caption:"📍 Как нас найти — видео-гид до зала",
     wa_float_label:"Напиши нам в WhatsApp",
     wa_msg_default:"Здравствуйте! Хочу узнать больше о Fercor Sports Club.",
     wa_msg_hero:"Здравствуйте! Хочу записаться на бесплатное первое занятие в Fercor Sports Club.",
