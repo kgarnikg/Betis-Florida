@@ -488,6 +488,21 @@
     .facility-item:first-child { grid-column: span 1; }
     .gym-gallery img { min-width: 100%; height: 120px; flex: 1 1 100%; }
   }
+  /* Social Videos */
+  .social-videos { padding: 5rem 4rem; background: #f7f8fc; }
+  .social-videos-inner { max-width: 1100px; margin: 0 auto; }
+  .social-videos-title { text-align: center; font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); color: var(--dark); margin-bottom: 0.4rem; letter-spacing: 0.05em; }
+  .social-videos-sub { text-align: center; color: rgba(26,26,46,0.5); font-size: 0.95rem; margin-bottom: 3rem; }
+  .social-videos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+  .sv-card { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 28px rgba(0,0,0,0.08); border: 1px solid rgba(0,102,255,0.08); }
+  .sv-card-header { display: flex; align-items: center; gap: 0.7rem; padding: 0.9rem 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .sv-card-header svg { width: 20px; height: 20px; flex-shrink: 0; }
+  .sv-card-handle { font-weight: 700; font-size: 0.88rem; color: var(--dark); }
+  .sv-card-handle span { color: #0066FF; font-weight: 400; }
+  .sv-embed { position: relative; width: 100%; overflow: hidden; }
+  .sv-embed iframe { width: 100%; display: block; border: 0; }
+  @media (max-width: 768px) { .social-videos { padding: 3rem 1rem; } .social-videos-grid { grid-template-columns: 1fr; } }
+
   /* Cookie Banner */
   #cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999; background: #fff; border-top: 2px solid #0066FF; box-shadow: 0 -4px 24px rgba(0,0,0,0.10); padding: 1rem 2rem; }
   .cookie-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
@@ -780,6 +795,46 @@
   </div>
 </section>
 
+<!-- Redes Sociales -->
+<section class="social-videos">
+  <div class="social-videos-inner">
+    <h2 class="social-videos-title" data-i18n="social_title">SÍGUENOS EN REDES</h2>
+    <p class="social-videos-sub" data-i18n="social_sub">Mira lo que pasa en Fercor Sports Club</p>
+    <div class="social-videos-grid">
+
+      <!-- Instagram Reel -->
+      <div class="sv-card">
+        <div class="sv-card-header">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="ig-g" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f09433"/><stop offset="50%" stop-color="#e6683c"/><stop offset="75%" stop-color="#dc2743"/><stop offset="100%" stop-color="#cc2366"/></linearGradient></defs>
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="url(#ig-g)" stroke-width="2" fill="none"/>
+            <circle cx="12" cy="12" r="4" stroke="url(#ig-g)" stroke-width="2" fill="none"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="#e6683c"/>
+          </svg>
+          <span class="sv-card-handle">Instagram <span>@gymfercor.bf</span></span>
+        </div>
+        <div class="sv-embed" style="padding-top:125%">
+          <iframe src="https://www.instagram.com/reel/DZQMZXeIF-Z/embed/" style="position:absolute;top:0;left:0;width:100%;height:100%" allowfullscreen scrolling="no" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <!-- TikTok -->
+      <div class="sv-card">
+        <div class="sv-card-header">
+          <svg viewBox="0 0 24 24" fill="#000" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
+          </svg>
+          <span class="sv-card-handle">TikTok <span>@gym_fercor</span></span>
+        </div>
+        <div class="sv-embed" style="padding-top:177%">
+          <iframe src="https://www.tiktok.com/embed/v2/7646867861251624214" style="position:absolute;top:0;left:0;width:100%;height:100%" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <div class="cta-banner">
   <h2 data-i18n="cta_h2">EMPIEZA HOY MISMO</h2>
   <p data-i18n="cta_p">Tu mejor versión te está esperando en Fercor Sports Club</p>
@@ -806,7 +861,7 @@
     <a href="#ubicacion" data-i18n="nav_contact">Contacto</a>
   </div>
   <div class="footer-social">
-    <a href="https://www.instagram.com/gymfercor.bf/" target="_blank" rel="noopener" aria-label="Instagram">
+    <a href="https://www.instagram.com/gym_fercor/" target="_blank" rel="noopener" aria-label="Instagram">
       <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85 0 3.2-.01 3.58-.07 4.85-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85 0-3.2.01-3.58.07-4.85C2.38 3.86 3.9 2.31 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16ZM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.7.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.63-6.78-6.98-6.98C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84ZM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4Zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44Z"/></svg>
     </a>
     <a href="https://www.tiktok.com/@gym_fercor" target="_blank" rel="noopener" aria-label="TikTok">
@@ -949,6 +1004,7 @@ const i18n = {
     wa_float_label:"Escríbenos en WhatsApp",
     cookie_text:"Usamos cookies para mejorar tu experiencia y analizar el tráfico del sitio. Al continuar, aceptas su uso.",
     cookie_accept:"Aceptar", cookie_decline:"Rechazar",
+    social_title:"SÍGUENOS EN REDES", social_sub:"Mira lo que pasa en Fercor Sports Club",
     wa_msg_default:"¡Hola! Me gustaría más información sobre Fercor Sports Club.",
     wa_msg_hero:"¡Hola! Quiero reservar mi primera clase gratis en Fercor Sports Club.",
     wa_msg_trial:"¡Hola! Vi la promo de la primera clase gratis y quiero apuntarme.",
@@ -1025,6 +1081,7 @@ const i18n = {
     wa_float_label:"Chat with us on WhatsApp",
     cookie_text:"We use cookies to improve your experience and analyse site traffic. By continuing, you accept their use.",
     cookie_accept:"Accept", cookie_decline:"Decline",
+    social_title:"FOLLOW US", social_sub:"See what's happening at Fercor Sports Club",
     wa_msg_default:"Hi! I'd like more information about Fercor Sports Club.",
     wa_msg_hero:"Hi! I'd like to book my first free class at Fercor Sports Club.",
     wa_msg_trial:"Hi! I saw the free first-class offer and I'd like to sign up.",
@@ -1101,6 +1158,7 @@ const i18n = {
     wa_float_label:"Напиши нам в WhatsApp",
     cookie_text:"Мы используем cookies для улучшения работы сайта и анализа трафика. Продолжая использование сайта, вы соглашаетесь с их использованием.",
     cookie_accept:"Принять", cookie_decline:"Отказаться",
+    social_title:"МЫ В СОЦСЕТЯХ", social_sub:"Смотри что происходит в Fercor Sports Club",
     wa_msg_default:"Здравствуйте! Хочу узнать больше о Fercor Sports Club.",
     wa_msg_hero:"Здравствуйте! Хочу записаться на бесплатное первое занятие в Fercor Sports Club.",
     wa_msg_trial:"Здравствуйте! Увидел(а) акцию — бесплатное первое занятие, хочу записаться.",
