@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MXQ5CLJV');</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fercor Sports Club – Gimnasio en Alicante</title>
@@ -485,9 +488,36 @@
     .facility-item:first-child { grid-column: span 1; }
     .gym-gallery img { min-width: 100%; height: 120px; flex: 1 1 100%; }
   }
+  /* Cookie Banner */
+  #cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999; background: #fff; border-top: 2px solid #0066FF; box-shadow: 0 -4px 24px rgba(0,0,0,0.10); padding: 1rem 2rem; }
+  .cookie-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+  .cookie-text { display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; color: #1a1a2e; flex: 1; min-width: 220px; }
+  .cookie-icon { font-size: 1.4rem; flex-shrink: 0; }
+  .cookie-actions { display: flex; gap: 0.75rem; flex-shrink: 0; }
+  #cookie-accept { background: #0066FF; color: #fff; border: none; border-radius: 4px; padding: 0.55rem 1.4rem; font-size: 0.88rem; font-weight: 600; cursor: pointer; letter-spacing: 0.03em; transition: background 0.2s; }
+  #cookie-accept:hover { background: #0044CC; }
+  #cookie-decline { background: transparent; color: #0066FF; border: 1.5px solid #0066FF; border-radius: 4px; padding: 0.55rem 1.1rem; font-size: 0.88rem; font-weight: 600; cursor: pointer; letter-spacing: 0.03em; transition: all 0.2s; }
+  #cookie-decline:hover { background: #f0f5ff; }
+  @media (max-width: 600px) { #cookie-banner { padding: 1rem; } .cookie-inner { flex-direction: column; align-items: flex-start; } .cookie-actions { width: 100%; } #cookie-accept, #cookie-decline { flex: 1; text-align: center; } }
 </style>
-</head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXQ5CLJV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" style="display:none" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+  <div class="cookie-inner">
+    <div class="cookie-text">
+      <span class="cookie-icon">🍪</span>
+      <span data-i18n="cookie_text">Usamos cookies para mejorar tu experiencia y analizar el tráfico del sitio. Al continuar, aceptas su uso.</span>
+    </div>
+    <div class="cookie-actions">
+      <button id="cookie-accept" data-i18n="cookie_accept">Aceptar</button>
+      <button id="cookie-decline" data-i18n="cookie_decline">Rechazar</button>
+    </div>
+  </div>
+</div>
 
 <nav>
   <a class="nav-logo" href="#"><span>Fercor</span> Sports Club</a>
@@ -917,6 +947,8 @@ const i18n = {
     map_pin:"Carrer Grado, 8", map_click:"Haz clic para abrir la ruta", map_btn:"Cómo llegar",
     video_caption:"📍 Así nos encontrarás — vídeo para llegar al gimnasio",
     wa_float_label:"Escríbenos en WhatsApp",
+    cookie_text:"Usamos cookies para mejorar tu experiencia y analizar el tráfico del sitio. Al continuar, aceptas su uso.",
+    cookie_accept:"Aceptar", cookie_decline:"Rechazar",
     wa_msg_default:"¡Hola! Me gustaría más información sobre Fercor Sports Club.",
     wa_msg_hero:"¡Hola! Quiero reservar mi primera clase gratis en Fercor Sports Club.",
     wa_msg_trial:"¡Hola! Vi la promo de la primera clase gratis y quiero apuntarme.",
@@ -991,6 +1023,8 @@ const i18n = {
     map_pin:"Carrer Grado, 8", map_click:"Click to open directions", map_btn:"Get directions",
     video_caption:"📍 See how to find us — video guide to the gym",
     wa_float_label:"Chat with us on WhatsApp",
+    cookie_text:"We use cookies to improve your experience and analyse site traffic. By continuing, you accept their use.",
+    cookie_accept:"Accept", cookie_decline:"Decline",
     wa_msg_default:"Hi! I'd like more information about Fercor Sports Club.",
     wa_msg_hero:"Hi! I'd like to book my first free class at Fercor Sports Club.",
     wa_msg_trial:"Hi! I saw the free first-class offer and I'd like to sign up.",
@@ -1065,6 +1099,8 @@ const i18n = {
     map_pin:"Carrer Grado, 8", map_click:"Нажми, чтобы открыть маршрут", map_btn:"Построить маршрут",
     video_caption:"📍 Как нас найти — видео-гид до зала",
     wa_float_label:"Напиши нам в WhatsApp",
+    cookie_text:"Мы используем cookies для улучшения работы сайта и анализа трафика. Продолжая использование сайта, вы соглашаетесь с их использованием.",
+    cookie_accept:"Принять", cookie_decline:"Отказаться",
     wa_msg_default:"Здравствуйте! Хочу узнать больше о Fercor Sports Club.",
     wa_msg_hero:"Здравствуйте! Хочу записаться на бесплатное первое занятие в Fercor Sports Club.",
     wa_msg_trial:"Здравствуйте! Увидел(а) акцию — бесплатное первое занятие, хочу записаться.",
@@ -1176,6 +1212,27 @@ setInterval(() => {
   const lang = activeBtn ? activeBtn.textContent.trim().toLowerCase() : 'es';
   updateLiveStatus(lang);
 }, 60000);
+
+// Cookie banner
+(function() {
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('cookie-accept');
+  const declineBtn = document.getElementById('cookie-decline');
+  if (!banner) return;
+  if (!localStorage.getItem('fercor_cookie_consent')) {
+    setTimeout(() => { banner.style.display = 'block'; }, 800);
+  }
+  acceptBtn.addEventListener('click', function() {
+    localStorage.setItem('fercor_cookie_consent', 'accepted');
+    banner.style.display = 'none';
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'cookie_consent_accepted' });
+  });
+  declineBtn.addEventListener('click', function() {
+    localStorage.setItem('fercor_cookie_consent', 'declined');
+    banner.style.display = 'none';
+  });
+})();
 </script>
 </body>
 </html>
